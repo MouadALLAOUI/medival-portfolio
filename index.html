@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
   <title>Mouad the Coder | Medieval Portfolio</title>
   <link rel="stylesheet" href="./styles/fonts.css" />
   <link rel="stylesheet" href="./styles/style.css" />
@@ -28,7 +29,7 @@
   </div>
   <!-- navigation -->
   <nav class="nav-container" id="nav-container">
-    <div class="nav-title">Mouad the Coder</div>
+    <div class="nav-title"><img src="./media/favicon.ico" />Mouad the Coder</div>
     <div class="nav-scroll">
       <div class="nav-links">
         <a href="#hero" class="nav-link">Oracle</a>
@@ -188,7 +189,9 @@
         <div class="parchment" id="skills-parchment">
           <h2 class="section-title">Scroll of Skills</h2>
           <p class="section-intro">Through years of arcane study and mystical practice, I have mastered these powerful
-            arts:</p>
+            arts:
+            <code>click card bellow for more details</code>
+          </p>
 
           <div class="skills-template">
             <div class="skills-overview"></div>
@@ -203,7 +206,8 @@
       <div class="parchment" id="projects-parch">
         <div>
           <h2 class="section-title">Tech Quests</h2>
-          <p class="section-intro">Journeys undertaken and artifacts forged through mystical coding rituals:</p>
+          <p class="section-intro">Journeys undertaken and artifacts forged through mystical coding
+            rituals: <code>click card bellow for more details</code></p>
         </div>
         <div class="projects-template">
           <div class="projects-overview"></div>
@@ -248,7 +252,9 @@
       <div class="section-content">
         <div class="parchment" id="about-parch">
           <h2 class="section-title">Coding Lore</h2>
-          <p class="section-intro">The chronicles of my journey through the realms of technology:</p>
+          <p class="section-intro">The chronicles of my journey through the realms of technology:
+            <code>click card bellow for more details</code>
+          </p>
 
           <div class="timeline"></div>
 
@@ -271,21 +277,25 @@
 
           <div class="contact-container">
             <div class="contact-form">
-              <form id="contact-form" action="#">
+              <form id="contact-form" action="https://formsubmit.co/moadallaoui1@gmail.com" method="POST">
                 <div class="form-group">
                   <label for="name">Your Name</label>
-                  <input type="text" id="name" placeholder="Enter your noble name">
+                  <input name="name" type="text" id="name" placeholder="Enter your noble name" required>
                 </div>
 
                 <div class="form-group">
                   <label for="email">Pigeon Address</label>
-                  <input type="email" id="email" placeholder="Where shall I send my raven?">
+                  <input name="email" type="email" id="email"
+                    placeholder="What realm shall the raven call home? (your email)" required>
                 </div>
 
                 <div class="form-group">
                   <label for="message">Your Message</label>
-                  <textarea id="message" rows="5" placeholder="Inscribe your message here..."></textarea>
+                  <textarea name="message" id="message" rows="5" placeholder="Inscribe your message here..."
+                    required></textarea>
                 </div>
+
+                <input type="hidden" name="_next" value="https://mouadallaoui.netlify.app/thankyou.html">
 
                 <button type="submit" class="wax-seal" id="seal-btn"></button>
               </form>
@@ -296,15 +306,16 @@
               <p>Seek me in these digital realms where I share my arcane knowledge:</p>
 
               <div class="social-links">
-                <a href="#" class="social-link" title="GitHub">⌖</a>
-                <a href="#" class="social-link" title="LinkedIn">🕴</a>
-                <a href="#" class="social-link" title="Twitter">🐦</a>
-                <a href="#" class="social-link" title="CodePen">✍</a>
+                <a href="https://github.com/MouadALLAOUI" class="social-link" title="GitHub">⌖</a>
+                <a href="https://www.linkedin.com/in/mouad-allaoui-975514223/" class="social-link"
+                  title="LinkedIn">🕴</a>
+                <!-- <a href="#" class="social-link" title="Twitter">🐦</a>
+                <a href="#" class="social-link" title="CodePen">✍</a> -->
               </div>
 
               <h3 style="margin-top: 30px;">Raven Delivery</h3>
               <p>For urgent matters, dispatch a raven to:</p>
-              <p style="font-family: 'Cinzel', serif; margin-top: 10px;">coder@mouadsdomain.com</p>
+              <p style="font-family: 'Cinzel', serif; margin-top: 10px; user-select: text;">moadallaoui1@gmail.com</p>
             </div>
           </div>
         </div>

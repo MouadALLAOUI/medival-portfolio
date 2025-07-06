@@ -63,10 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
       : '';
     skillsOverviewContainer.innerHTML = `
     <div class="skill-overview active">
-        <h2 class="skill-name">${element.name}</h2>
+        
         ${element.overview.thumbnail &&
       (`<div class="thumbnail"><img src="${element.overview.thumbnail}" /></div>`)
       }
+        <h2 class="skill-name">${element.name}</h2>
         <p class="skill-startdate"><strong>Started:</strong> ${element.overview.startdate || 'Unknown'}</p>
         <div class="skill-proficiency">${starsHtml}</div>
         <p class="skill-intro">${element.overview.intro || ''}</p>
@@ -136,10 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
     projectsOverviewContainer.classList.add("active", itemClass);
     // alert(element.title)
     projectsOverviewContainer.innerHTML = `
-      <h1 class="title">${element.title}</h1>
-      ${element.overview.thumbnail &&
+    ${element.overview.thumbnail &&
       (`<div class="thumbnail"><img src="${element.overview.thumbnail}" /></div>`)
       }
+    <h1 class="title">${element.title}</h1>
       ${element.tags.length > 0 ?
         (`<div class="tech-stack">
       ${element.tags.map((item, i) => (

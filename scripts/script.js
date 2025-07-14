@@ -71,17 +71,24 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="skill-startdate"><strong>Started:</strong> ${element.overview.startdate || 'Unknown'}</p>
         <div class="skill-proficiency">${starsHtml}</div>
         <p class="skill-intro">${element.overview.intro || ''}</p>
-        <p class="skill-desc">${element.overview.desc || ''}</p>
+        ${element.overview.desc &&
+      (`<h3>Detailled desciprion</h3>
+        <div class="markdown-content">${markdownToHtml(element.overview.desc)}</div>`)
+      }
         ${featuresHtml}
         ${imgsHtml}
-        <h3>Story Behind It:</h3>
+        
         <p class="skill-story">${element.overview.storyBehindIt || 'not listed'}</p>
+        ${element.overview.storyBehindIt &&
+      (`<h3>Story Behind It:</h3>
+        <div class="markdown-content">${markdownToHtml(element.overview.storyBehindIt)}</div>`)
+      }
       </div>
 
     `;
   }
 
-  // overviewSkills(skills[0]); // Show the first skill by default
+  overviewSkills(skills[0]); // Show the first skill by default
 
   skills.forEach(element => {
     const skillCard = document.createElement('div');

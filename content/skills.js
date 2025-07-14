@@ -3,33 +3,48 @@ const skills = [
     id: 1,
     icon: "⌬",
     name: "Frontend Sorcery",
-    description: "Weaving spells with HTML, CSS, and JavaScript to create enchanting user experiences.",
+    description: "<strong>Frontend</strong> is one of my strongest spells. I wield it to craft <code>user interfaces (UI)</code> and enchant <code>user experiences (UX)</code>, using many languages and tools across the realm of webcraft.",
     level: 5, // 1 to 5 scale
     overview: {
       thumbnail: "../media/Skills/1/thumb.png",
-      intro: "Frontend sorcery is the art of crafting captivating user interfaces and experiences using HTML, CSS, and JavaScript. It involves creating responsive designs, interactive elements, and seamless navigation to engage users.",
-      desc: "Frontend sorcery is the art of crafting captivating user interfaces and experiences using HTML, CSS, and JavaScript. It involves creating responsive designs, interactive elements, and seamless navigation to engage users. This skill is essential for building visually appealing and user-friendly web applications.",
+      intro: "<strong>Frontend Sorcery</strong> is the noble art of turning raw elements—<code>HTML</code>, <code>CSS</code>, and <code>JavaScript</code>—into living, breathing pages. With this magic, I forge <code>responsive designs</code>, <code>interactive runes</code>, and smooth pathways for every traveler who visits.",
+      desc: "Frontend is the power to shape designs into real, working code—like turning scrolls into living portals. I use different languages and sometimes ancient frameworks to summon full user experiences.\nAs this magic is rooted in webcraft, mastering the scrolls of `HTML` and `CSS` and knowing the basics of `JavaScript` is essential. From these, other tools arise—like the mighty `React` (both for web `JS` and mobile `Native`), and spells such as `Vue`, `Next`, and `Electron`.\nThis path focuses on the **`User Experience (UX)`**. A skilled frontend mage must know how to build responsive layouts and summon charming `User Interfaces (UI)` that work well across any device or kingdom.\n\n#### 🧰 Tools of the Trade\n\n- VS Code (`my spellbook`)\n- Browsers: Chrome, Firefox, Edge (`testing portals`)\n- Figma (`design forge`)\n- Canva (`visual scroll maker`)\n\n#### 📚 Languages & Frameworks\n\n> ✦ Core Runes \n\n- HTML\n- CSS\n- JavaScript\n\n> ✦ Arcane Support \n\n- React js\n- React native\n- Vue js\n- Laravel `.blade.php`\n- Next js\n- Electron\n- Scss\n- Bootstrap\n- Tailwind CSS",
       features: [
-        "Responsive Web Design",
-        "Cross-Browser Compatibility",
-        "Performance Optimization",
-        "Accessibility Best Practices",
-        "Version Control with Git"
+        "Responsive Layouts",
+        "Cross-Browser Shielding",
+        "Speed & Performance Buffs",
+        "Accessibility Enchantments",
+        "Git for Spell Versioning"
       ],
       imgs: [
         {
-          src: "../media/cafe_medieval_day.png",
-          alt: "A screenshot of a responsive web design",
-          isBlured: true,
+          src: "../media/Skills/1/figma-arkani.png",
+          alt: "figma arkani app",
+          isBlur: false,
         },
         {
-          src: "../media/city_medieval_day.png",
-          alt: "A screenshot of a JavaScript interactive element",
-          isBlured: false,
+          src: "../media/Skills/1/figma-stockmanagement.png",
+          alt: "figma gestion de stock",
+          isBlur: false,
+        },
+        {
+          src: "../media/Skills/1/figma pharma.png",
+          alt: "figma pharma",
+          isBlur: false,
+        },
+        {
+          src: "../media/Skills/1/canva GDD.png",
+          alt: "canva GDD",
+          isBlur: false,
+        },
+        {
+          src: "../media/Skills/1/vs style.png",
+          alt: "vs style",
+          isBlur: false,
         }
       ],
       startdate: "2015-01-01",
-      storyBehindIt: "My journey into frontend sorcery began with a fascination for how websites are built. I started with simple HTML pages and gradually learned CSS for styling and JavaScript for interactivity. Over the years, I've honed my skills through countless projects, always striving to create better user experiences.",
+      storyBehindIt: "My path into frontend sorcery began when I first wondered how scrolls (webpages) came to life. I began with simple `HTML`, then studied `CSS` to bring form and `JavaScript` to add movement. Over time, through many quests and trials, I learned to craft real experiences that users enjoy.\n\nEach project sharpened my skills, and now, I continue this journey—seeking to master deeper magic and forge even stronger interfaces.",
     },
   },
   {

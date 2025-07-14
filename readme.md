@@ -1,6 +1,5 @@
 # Medival portfolio
 
-
 This is the medieval portfolio of Mouad the Coder (allaoui Mouad).
 
 - The portfolio is designed to showcase skills, projects, and a chatbot interface.

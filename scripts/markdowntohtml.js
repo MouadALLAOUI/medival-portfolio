@@ -126,7 +126,7 @@ function parseInline(html) {
   html = applyRegex(html, /\*(.*?)\*/gim, '<em>$1</em>');
   html = applyRegex(html, /_(.*?)_/gim, '<em>$1</em>');
   html = applyRegex(html, /~~(.*?)~~/gim, '<del>$1</del>');
-  html = applyRegex(html, /\[(.*?)\]\((.*?)\)/gim, '<a href="$2">$1</a>');
+  html = applyRegex(html, /\[(.*?)\]\((.*?)\)/gim, '<a href="$2" target="_blank">$1</a>');
   html = applyRegex(html, /!\[(.*?)\]\((.*?)\)/gim, '<img src="$2" alt="$1">');
   html = applyRegex(html, /`(.*?)`/gim, '<code>$1</code>');
   return html;

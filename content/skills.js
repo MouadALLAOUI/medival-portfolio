@@ -51,12 +51,12 @@ const skills = [
     id: 2,
     icon: "⚙️",
     name: "Backend Alchemy",
-    description: "Transforming data and logic into powerful potions with Node.js, Python, and SQL.",
+    description: "<strong>Backend</strong> is the unseen force behind a website. While the frontend enchants users with visuals and interaction, the backend works in the shadows—handling servers, storing data, and forging powerful APIs.",
     level: 4, // 1 to 5 scale
     overview: {
       thumbnail: "../media/skills/2/thumb.png",
-      intro: "Backend alchemy is the art of transforming data and logic into powerful applications using Node.js, Python, and SQL. It involves creating robust server-side solutions, managing databases, and ensuring seamless communication between the client and server.",
-      desc: "Backend alchemy is the art of transforming data and logic into powerful applications using Node.js, Python, and SQL. It involves creating robust server-side solutions, managing databases, and ensuring seamless communication between the client and server. This skill is essential for building scalable and efficient web applications.",
+      intro: "<strong>Backend alchemy</strong> is the sacred art of turning logic and data into real-world applications. Using tools like Node.js, Python, and SQL, backend alchemists build server-side magic, manage spellbooks (databases), and keep the realm running smoothly.",
+      desc: "Backend is the power to craft logic, store information, and shape how data flows through an application. It lets you build functions and APIs that store, update, or fetch data from enchanted vaults—known as databases.\nThese vaults can be **relational** (like `SQL`, `Oracle`, `SQLite`) or **non-relational** (like `MongoDB`, `Firebase`, or `PostgreSQL`).\nBackend mages often carry tools like `XAMPP` or `WAMP` to summon local servers, `Postman` to test API scrolls, and `Atlas` to gaze into the MongoDB cloud.\nThe common tongues of backend magic include `PHP`, `JavaScript`, and `Python`. Each has its own schools—`Laravel`, `CodeIgniter`, and `Django`—while `Express.js` and `Next.js` serve both backend and frontend domains.\n\n#### 🧰 Backend Tools of the Trade \n- Postman (for scroll testing)\n- WAMP / XAMPP (local server summoning)\n- MongoDB Atlas (cloud vault access)\n- PHPMyAdmin\n- MySQL Workbench — GUI for managing MySQL databases.\n- MongoDB Compass — GUI for working with MongoDB (NoSQL).\n\n#### 📚 Backend Languages & Frameworks\n\n> ✦ Backend Core Runes\n\n- PHP\n- JavaScript\n- SQL\n- Python\n- 🧰 CLI TOOLS\n  - npm\n  - composer\n\n> ✦ Backend Arcane Support\n\n- Laravel\n- CodeIgniter\n- Express.js\n- Next.js\n- Django\n- MySQL\n- SQLite\n- MongoDB\n- Firebase\n- Axios",
       features: [
         "RESTful API Development",
         "Database Management (SQL, NoSQL)",
@@ -66,62 +66,134 @@ const skills = [
       ],
       imgs: [
         {
-          src: "../media/cafe_medieval_day.png",
-          alt: "A screenshot of a responsive web design",
+          src: "../media/Skills/2/postman.png",
+          alt: "postman",
           isBlured: true,
         },
         {
-          src: "../media/city_medieval_day.png",
-          alt: "A screenshot of a JavaScript interactive element",
-          isBlured: false,
+          src: "../media/Skills/2/postman methode.png",
+          alt: "postman methode",
+          isBlured: true,
+        },
+        {
+          src: "../media/Skills/2/wamp launch.png",
+          alt: "wamp launch",
+          isBlured: true,
+        },
+        {
+          src: "../media/Skills/2/wamp menu.png",
+          alt: "wamp menu",
+          isBlured: true,
+        },
+        {
+          src: "../media/Skills/2/phpmyadmin shema.png",
+          alt: "phpmyadmin shema",
+          isBlured: true,
+        },
+        {
+          src: "../media/Skills/2/phpmyadmin structure.png",
+          alt: "phpmyadmin structure",
+          isBlured: true,
         }
       ],
       startdate: "2015-01-01",
-      storyBehindIt: "My journey into frontend sorcery began with a fascination for how websites are built. I started with simple HTML pages and gradually learned CSS for styling and JavaScript for interactivity. Over the years, I've honed my skills through countless projects, always striving to create better user experiences.",
+      storyBehindIt: "After many adventures in frontend lands, I realized something was missing—my websites had form, but no soul. I needed more than just beauty; I needed function.\nThat’s when I discovered backend alchemy. My first steps were simple: storing data in `JSON` using JavaScript. It wasn't elegant, but it worked for small quests.\nAs my projects grew in size and complexity, I sought deeper magic. I began to learn how to summon servers, craft powerful APIs, and master databases. Now, I walk both paths—frontend and backend—capable of building full systems from the ground up.",
     },
   },
   {
     id: 3,
     icon: "🛡️",
     name: "Security Wards",
-    description: "Crafting protective enchantments against digital threats and vulnerabilities.",
+    description: "<strong>Security</strong> is the art of shielding systems from the dark forces of cyberspace. With this skill, I deploy firewalls, encryption, and secure protocols to protect users, data, and digital strongholds.",
     level: 1,
     overview: {
       thumbnail: "../media/Skills/3/thumb.jpg",
-      intro: "Security Wards is about shielding systems from dark forces in cyberspace. With this skill, I deploy firewalls, encryption, and secure protocols to protect users and data.",
-      desc: "Security Wards focuses on building and enforcing defense mechanisms against common and advanced digital threats. This includes experience with firewalls, SSL/TLS, PGP, OWASP practices, and authentication strategies.",
+      intro: "<strong>Security</strong> is the art of shielding systems from the dark forces of cyberspace. With this skill, I deploy firewalls, encryption, and secure protocols to protect users, data, and digital strongholds.<br /><br /> <strong>Security Wards</strong> focuses on forging and maintaining defenses against both common and advanced threats. From encryption and firewalls to OWASP defenses and secure authentication, these techniques help keep the realm safe from intruders.",
+      desc: "Security is about crafting strong barriers—both visible and hidden—against digital attacks. It involves defending systems with tools like firewalls, encrypted tunnels (SSL/TLS, PGP), and access control spells.\n\nIn my journey, I’ve trained with different tools. Some help me test my own defenses through controlled attacks (`Burp Suite`, `Nmap`, `Wireshark`, `Zenmap`). Others guide me through challenges and learning quests—like `TryHackMe` and `PortSwigger`.\n\nWhile these arts can be practiced on any platform, I find their magic shines brightest on Linux systems—at least for me.\n\n\n#### 🧰 Security Tools of the Trade\n\n- burp Suite\n- Nmap / Zenmap\n- kleopatra (certificat encrypt)\n- Wireshark\n- [cryptool](https://www.cryptool.org/)\n- TryHackMe / PortSwigger (training camps)\n\n\n#### 📚 Security Languages & Frameworks\n\n> **✦ Security Core Runes**\n\n- Python\n- RSA\n- Shell Scripting\n\n\n> **✦ Security Arcane Support**\n\n- Python\n- bash scripting\n- Linux Networking Commands (`iptables`, `netstat`,\n`tcpdump`)",
       features: [
-        "Encryption Techniques (PGP, SSL)",
-        "Authentication/Authorization",
-        "OWASP Top 10 Defense",
+        "Encryption Techniques (PGP, SSL/TLS)",
+        "Authentication & Authorization Shields",
         "Firewall and VPN Configurations",
-        "Threat Detection & Response"
+        "Threat Detection and Incident Response"
       ],
-      imgs: [],
-      startdate: "2020-05-01",
-      storyBehindIt: "I started diving into cybersecurity after encountering vulnerabilities in a client project. That experience ignited a deeper interest in securing systems by design."
+      imgs: [
+        {
+          src: "../media/Skills/3/burp.png",
+          alt: "burp",
+          isBlured: false,
+        },
+        {
+          src: "../media/Skills/3/burp2.png",
+          alt: "burp2",
+          isBlured: false,
+        },
+        {
+          src: "../media/Skills/3/kleopatra.png",
+          alt: "kleopatra",
+          isBlured: false,
+        },
+        {
+          src: "../media/Skills/3/wireshark.png",
+          alt: "wireshark",
+          isBlured: true,
+        },
+        {
+          src: "../media/Skills/3/zenmap.png",
+          alt: "zenmap",
+          isBlured: false,
+        },
+      ],
+      startdate: "01-11-2024",
+      storyBehindIt: "This skill didn’t appear clearly at first. In my early days of frontend and backend development, I followed some protective practices without knowing their true nature.\n\nOver time, I began to notice a pattern—secure code, cautious logic, clean structure. Then came a turning point: studying `Systeme informatique et réseaux` `computer systems and networks`, where I met allies who shared a deep interest in cybersecurity.\n\nTogether, we explored new lands of knowledge—penetration testing, network defense, and encryption. Thanks to those companions, I began to truly understand and develop this craft."
     }
   },
   {
     id: 4,
     icon: "🔮",
     name: "AI Conjuring",
-    description: "Summoning intelligent entities with machine learning and neural networks.",
+    description: "<strong>AI Conjuring</strong> With words as my spells, I awaken machines to assist, advise, and create.",
     level: 4,
     overview: {
       thumbnail: "../media/Skills/4/thumb.jpg",
-      intro: "AI Conjuring is the art of bringing intelligence to applications through algorithms and data.",
-      desc: "This skill includes practical implementation of ML/DL models, data preprocessing, anomaly detection, classification, and experimentation using tools like Scikit-learn, TensorFlow, or custom logic.",
+      intro: "<strong>AI Conjuring</strong>is the craft of communicating with intelligent entities through carefully forged prompts and guided interaction.<br />With words as my spells, I awaken machines to assist, advise, and create.",
+      desc: "I used my knowledge of artificial intelligence to **build the chatbot featured at the top of my portfolio**, blending both technical understanding and prompt mastery.\n\nThis skill focuses on **interacting with AI-powered entities**, crafting prompts, and guiding intelligent systems to respond with clarity and purpose. But it doesn’t stop there—my background also includes **hands-on experience with machine learning**, data processing, anomaly detection, and building custom models using tools like Scikit-learn and TensorFlow.\n\nIn a world where AI is expanding its domain, **AI Conjuring** allows me to both **command existing intelligence through precise interaction**, and **forge new capabilities through code and data**.\n\nWith this dual ability, I can adapt to any challenge—either by summoning insight through prompts or crafting solutions with algorithms.\n\n### ✨ AI Known Spells\n\n- Prompt Engineering\n- Refining AI Outputs\n- Context Management\n- Instruction-based Prompting\n- Creative Prompt Design\n- Prompt Chaining & Iteration\n\n### 🧰 Ai Tools\n\n- Open ai : ChatGPT\n- Google : Gemini\n- Microsoft : Copilot\n- DeepSeek\n- AliBaba : Qwen\n- Claude\n\n> These are the familiars I call upon for different tasks.\n\n### 📚 AI Languages & Frameworks\n\n> **✦ AI Core Runes**\n\n- English (Clear, Structured Prompts)\n- Markdown (For Presentation & Clarity)\n\n> **✦ AI Arcane Support**\n\n- Web Browsers\n- Prompt Templates\n- Notebook Environments",
       features: [
-        "Machine Learning Fundamentals",
-        "Neural Network Modeling",
-        "Anomaly Detection",
-        "Data Preprocessing & Feature Engineering",
-        "Model Evaluation & Tuning"
+        "Prompt Engineering",
+        "Refining AI Outputs",
+        "Context Management",
+        "Instruction-based Prompting",
+        "Creative Prompt Design",
+        "Prompt Chaining & Iteration"
       ],
-      imgs: [],
-      startdate: "2023-03-01",
-      storyBehindIt: "Inspired by the potential of intelligent systems, I started building chatbots and AI models, integrating them into web apps for automation and smart interactions."
+      imgs: [
+        {
+          src: "../media/Skills/4/chatgpt.png",
+          alt: "chatgpt",
+          isBlured: false,
+        },
+        {
+          src: "../media/Skills/4/deepseek.png",
+          alt: "deepseek",
+          isBlured: false,
+        },
+        {
+          src: "../media/Skills/4/manus.png",
+          alt: "manus",
+          isBlured: false,
+        },
+        {
+          src: "../media/Skills/4/qwen.png",
+          alt: "qwen",
+          isBlured: false,
+        },
+        {
+          src: "../media/Skills/4/venice ai.png",
+          alt: "venice",
+          isBlured: false,
+        },
+      ],
+      startdate: "2023-01-01",
+      storyBehindIt: "I didn’t go looking for this skill—**AI came to me** as part of the world’s transformation.\n\nAs machines began thinking, creating, and deciding, I realized I had two choices: ignore it and fall behind, or learn to **wield it with purpose**. But I also saw the danger—people relying on it blindly, losing the will to grow on their own.\n\nSo I made a decision:\n\n***Adapt, but never depend.***\n\nI trained hard, learned deeply, and built my own discipline. Now, I use AI as a tool—not a crutch.\n\nWhen a task isn’t urgent, I push myself to do it as if **AI didn’t exist**. That’s how I sharpen my own mind, while still commanding the full power of AI when needed."
     }
   },
   {

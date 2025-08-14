@@ -20,30 +20,35 @@ const skills = [
         {
           src: "../media/Skills/1/figma-arkani.png",
           alt: "figma arkani app",
-          isBlur: false,
+          isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/1/figma-stockmanagement.png",
           alt: "figma gestion de stock",
-          isBlur: false,
+          isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/1/figma pharma.png",
           alt: "figma pharma",
-          isBlur: false,
+          isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/1/canva GDD.png",
           alt: "canva GDD",
-          isBlur: false,
+          isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/1/vs style.png",
           alt: "vs style",
-          isBlur: false,
+          isBlured: false,
+          isMobile: false,
         }
       ],
-      startdate: "2015-01-01",
+      startdate: "2020-01-01",
       storyBehindIt: "My path into frontend sorcery began when I first wondered how scrolls (webpages) came to life. I began with simple `HTML`, then studied `CSS` to bring form and `JavaScript` to add movement. Over time, through many quests and trials, I learned to craft real experiences that users enjoy.\n\nEach project sharpened my skills, and now, I continue this journey—seeking to master deeper magic and forge even stronger interfaces.",
     },
   },
@@ -68,35 +73,41 @@ const skills = [
         {
           src: "../media/Skills/2/postman.png",
           alt: "postman",
-          isBlured: true,
+          isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/2/postman methode.png",
           alt: "postman methode",
-          isBlured: true,
+          isBlured: false,
+          isMobile: true,
         },
         {
           src: "../media/Skills/2/wamp launch.png",
           alt: "wamp launch",
-          isBlured: true,
+          isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/2/wamp menu.png",
           alt: "wamp menu",
-          isBlured: true,
+          isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/2/phpmyadmin shema.png",
           alt: "phpmyadmin shema",
-          isBlured: true,
+          isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/2/phpmyadmin structure.png",
           alt: "phpmyadmin structure",
-          isBlured: true,
+          isBlured: false,
+          isMobile: false,
         }
       ],
-      startdate: "2015-01-01",
+      startdate: "2021-01-01",
       storyBehindIt: "After many adventures in frontend lands, I realized something was missing—my websites had form, but no soul. I needed more than just beauty; I needed function.\nThat’s when I discovered backend alchemy. My first steps were simple: storing data in `JSON` using JavaScript. It wasn't elegant, but it worked for small quests.\nAs my projects grew in size and complexity, I sought deeper magic. I began to learn how to summon servers, craft powerful APIs, and master databases. Now, I walk both paths—frontend and backend—capable of building full systems from the ground up.",
     },
   },
@@ -121,26 +132,31 @@ const skills = [
           src: "../media/Skills/3/burp.png",
           alt: "burp",
           isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/3/burp2.png",
           alt: "burp2",
           isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/3/kleopatra.png",
           alt: "kleopatra",
           isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/3/wireshark.png",
           alt: "wireshark",
-          isBlured: true,
+          isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/3/zenmap.png",
           alt: "zenmap",
           isBlured: false,
+          isMobile: false,
         },
       ],
       startdate: "01-11-2024",
@@ -170,26 +186,31 @@ const skills = [
           src: "../media/Skills/4/chatgpt.png",
           alt: "chatgpt",
           isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/4/deepseek.png",
           alt: "deepseek",
           isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/4/manus.png",
           alt: "manus",
           isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/4/qwen.png",
           alt: "qwen",
           isBlured: false,
+          isMobile: false,
         },
         {
           src: "../media/Skills/4/venice ai.png",
           alt: "venice",
           isBlured: false,
+          isMobile: false,
         },
       ],
       startdate: "2023-01-01",
@@ -200,12 +221,12 @@ const skills = [
     id: 5,
     icon: "📱",
     name: "Mobile Enchantments",
-    description: "Creating responsive and engaging mobile applications with React Native and Flutter.",
+    description: "<strong>Mobile Enchantments</strong> involve casting cross-platform spells to build interactive mobile apps.",
     level: 3,
     overview: {
       thumbnail: "../media/Skills/5/thumb.jpg",
-      intro: "Mobile Enchantments involve casting cross-platform spells to build interactive mobile apps.",
-      desc: "Using frameworks like React Native and Flutter, I craft beautiful UIs and smooth user experiences for both Android and iOS platforms.",
+      intro: "<strong>Mobile Enchantments</strong> involve casting cross-platform spells to build interactive mobile apps.<br />Creating responsive and engaging mobile applications with React Native and Flutter.",
+      desc: "**Mobile Enchantments** is the art of shaping spells that fit the magical tomes carried by every traveler and noble in the realm. With the right incantations, I turn ideas into touchable enchantments—apps that respond to every scroll, tap, and whisper.\n\nTo forge these mobile spells, I use a mix of old and new magic. Sometimes I draw upon general-purpose spells from the frontlines like `HTML`, `CSS`, and `JavaScript`, combined with the sacred teachings of `Responsive Design`. Other times, I wield more focused tools of the trade—like the hybrid scrolls of `React Native` and `Expo`.\n\nThough I’ve also touched the deeper magics of `Swift`,  `Kotlin` and `Flutter`, those paths still demand patience and practice. Yet with each trial, my spellbook grows stronger.\n\n### 🧰 Mobile Tools\n\n- Android Studio\n- Expo\n- ADB (Android Debug Bridge)\n- BlueStacks\n- VS Code\n- Physical Devices (for real-world testing)\n\n### 📚 Mobile Languages & Frameworks\n\n> **✦ Mobile Core Runes**\n\n- React Native\n- Kotlin\n- JavaScript\n\n> **✦ Mobile Arcane Support**\n\n- HTML & CSS (for hybrid layouts)\n- Virtual Devices (emulators)\n- Figma (UI/UX crafting)\n- Firebase (backend spells)\n- REST APIs (communication magic)",
       features: [
         "Cross-Platform Development",
         "Responsive Layouts",
@@ -213,53 +234,118 @@ const skills = [
         "Native Module Integration",
         "Mobile Performance Optimization"
       ],
-      imgs: [],
-      startdate: "2022-08-01",
-      storyBehindIt: "Wanting to bring my apps to phones, I explored React Native and Flutter, discovering powerful tools for building fast, beautiful mobile UIs."
+      imgs: [
+        {
+          src: "../media/Skills/5/Dssissa.png",
+          alt: "dssissa",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/5/Dssissa1.png",
+          alt: "dssissa1",
+          isBlured: false,
+          isMobile: true,
+        },
+        {
+          src: "../media/Skills/5/Dssissa2.png",
+          alt: "dssissa2",
+          isBlured: false,
+          isMobile: true,
+        },
+        {
+          src: "../media/Skills/5/Arkani.png",
+          alt: "Arkani",
+          isBlured: false,
+          isMobile: true,
+        },
+        {
+          src: "../media/Skills/5/Arkani1.png",
+          alt: "Arkani1",
+          isBlured: false,
+          isMobile: true,
+        },
+        {
+          src: "../media/Skills/5/Arkani3.png",
+          alt: "Arkani2",
+          isBlured: false,
+          isMobile: true,
+        },
+      ],
+      startdate: "2022-01-01",
+      storyBehindIt: "Long ago, in the days when glowing rectangles first entered the hands of the common folk, I held one and felt something stir within me. Not just awe—but purpose. I didn’t merely see a device; I saw a spellbook waiting to be written, a window into infinite worlds. From that moment on, I knew: I would one day craft enchantments that lived within these magical tomes.\n\nIn my early days as a student of the full-stack order, I studied the ancient scrolls of web sorcery, learning the basics of structure, logic, and style. But while others were content mastering the scrolls of `HTML`, `CSS`, and `JavaScript`, my gaze often wandered to the realm of mobile magic—a realm where every touch was a rune, every swipe a command.\n\nI began by summoning simple interfaces using hybrid charms, mixing web spells with responsive enchantments. Soon, I uncovered the sacred scrolls of `React Native`, which allowed me to craft powerful cross-platform incantations. With the aid of `Expo`, I summoned my first fully working familiars—apps that answered to my every instruction.\n\nEven now, though I have journeyed through many lands of code and built artifacts for all kinds of devices, the path of Mobile Enchantments remains one of my favorite quests. With each app, I breathe life into my ideas—transforming them into spells others can hold in their hands.\n\nThis path is far from over. Many runes remain untranslated. But the fire that sparked from that first encounter still burns, guiding my hand as I craft ever more powerful enchantments for the devices of this world."
     }
   },
   {
     id: 6,
     icon: "🌐",
     name: "Web Explorer",
-    description: "Exploring the enchanted realms of internet",
+    description: "<strong>Web Explorer</strong> — Navigating the enchanted realms of the Internet.",
     level: 4,
     overview: {
       thumbnail: "../media/skills/6/thumb.jpg",
-      intro: "Web Explorer is all about understanding how the internet works, from HTTP spells to domain rituals.",
-      desc: "This skill involves knowledge of browser behavior, APIs, protocols like HTTP/HTTPS, DNS, and tools for network inspection, performance tuning, and request tracing.",
+      intro: "<strong>Web Explorer</strong> — Navigating the enchanted realms of the Internet.<br/>Web Explorer is the art of understanding how the web truly works — from HTTP incantations to domain name rituals, browser behavior, and the hidden currents of online realms.",
+      desc: "To become a true Web Explorer is to learn how the invisible threads of the Internet are woven. This skill grants me the ability to read browser scrolls, trace mysterious links, and understand the behavior of modern web portals. I study the sacred protocols — `HTTP` and `HTTPS` — and the gatekeepers of the web, such as `DNS` and domain lords.\n\nFrom wielding inspection tools like `DevTools` to analyzing the flow of requests and responses, I can uncover how a page breathes, how resources are summoned, and where latency hides in the shadows. I navigate APIs like ancient maps, fetch data from distant servers, and learn how different clients and spells interact.\n\nWith this knowledge, I can optimize performance, reduce loading rituals, and better understand how a single click leads to an entire world of magic behind the screen.\n\n### 🧰 Web Explorer Tools\n\n- Search Engines (Google, DuckDuckGo...)\n- Web Browsers (Chrome, Firefox, Brave...)\n- DevTools\n- Inspect Element\n- Online API tools (Postman, ReqBin)\n\n### 📚 Web Explorer Languages & Frameworks\n\n> **✦ Web Explorer Core Runes**\n\n- English\n- French\n- Arabic\n\n> **✦ Web Explorer Arcane Support**\n\n- HTML & CSS & JavaScript\n- Browser DevTools\n- API Interfaces",
       features: [
-        "HTTP/HTTPS Protocol Mastery",
-        "DNS & Domain Management",
         "Web Performance Monitoring",
         "DevTools Network Inspection",
-        "API Consumption & Debugging"
+        "API Consumption & Debugging",
+        "DNS and Domain Knowledge",
+        "HTTP Headers Decoding",
+        "Surfing through the internet wisely"
       ],
-      imgs: [],
+      imgs: [
+        {
+          src: "../media/Skills/6/searchEngine.png",
+          alt: "search Engine",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/6/Browsers.png",
+          alt: "web Browsers",
+          isBlured: false,
+          isMobile: false,
+        },
+      ],
       startdate: "2016-04-01",
-      storyBehindIt: "I started as a curious explorer, inspecting pages and decoding headers. This led me deeper into how the web truly works."
+      storyBehindIt: "My journey as a Web Explorer began in the early days of my youth, armed with nothing more than curiosity and a shared family computer. I still remember the very first phrase I entered into the sacred scrolls of Google: *’’العاب اكشن’’* It was a simple request, but it opened a portal to an entirely new world — one of endless discovery and digital wonder.\n\nBack then, I did not know how the results appeared, how clicking a link summoned pages from distant lands, or how the banners and games knew where I had been. But I returned, day after day, driven by that same fire of curiosity. I searched. I clicked. I explored.\n\nOver time, that innocent wonder grew into a desire to **understand**. I began to peek behind the veil using browser tools, inspecting network spells and learning how each part of a website was conjured. I learned that behind every link was a ritual — behind every page, a structure.\n\nWhat started as a child’s game slowly became a quest for mastery. From reading response headers to analyzing performance bottlenecks, I grew into the role of a true Web Explorer — no longer just a visitor of the web, but a mapper of its hidden paths."
     }
   },
   {
     id: 7,
     icon: "📊",
     name: "Data Divination",
-    description: "Harnessing the power of data analytics and visualization to uncover hidden insights.",
+    description: "<strong>Data Divination or Data Analysis</strong> — The ancient craft of reading the hidden patterns in the numbers. Harnessing the power of data analytics and visualization to uncover hidden insights.",
     level: 2,
     overview: {
       thumbnail: "../media/skills/7/thumb.jpg",
-      intro: "Data Divination involves analyzing and visualizing datasets to reveal patterns and hidden truths.",
-      desc: "Using tools like Python, Excel, and visualization libraries, I build dashboards, interpret trends, and generate insights to drive smart decisions.",
+      intro: "Data Divination is the art of gathering raw numbers, cleansing them of noise, and shaping them into charts and symbols that reveal truths unseen by the naked eye.",
+      desc: "Much like a seer reading runes by the fire, I study datasets to discover the patterns, trends, and whispers they carry. Using the enchanted tools of this age — from the `Python` language to the mystical scrolls of `Excel` — I turn piles of raw numbers into clear stories.\n\nWith the right incantations, I clean and prepare messy data, forge visualizations in the form of charts and graphs, and uncover hidden links between values. Whether it's a simple comparison or the early signs of a coming trend, my goal is to bring clarity to the fog of uncertainty.\n\nThrough `Matplotlib`, `Pandas`, and other analytical runes, I turn silent data into actionable insight — guiding decisions like a trusted oracle.\n\n### 🧰 Data Divination Tools\n\n- Excel\n- Python\n- Jupyter Notebook\n- Matplotlib\n- Pandas\n\n\n### 📚 Data Divination Languages & Frameworks\n\n> **✦ Data Divination Core Runes**\n\n- python\n\n> **✦ Data Divination Arcane Support**\n\n- Matplotlib\n- Pandas\n- Charts\n- Graphs",
       features: [
-        "Data Cleaning & Preprocessing",
+        "Data Cleansing & Preparation",
         "Data Visualization (Charts, Graphs)",
         "Exploratory Data Analysis",
-        "Basic Statistics & Correlation",
-        "Jupyter, Matplotlib, Pandas"
+        "Basic Statistics & Correlation Finding",
+        "Dashboard Crafting",
+        "Storytelling with Data"
       ],
-      imgs: [],
+      imgs: [
+        {
+          src: "../media/Skills/7/Dashboard.png",
+          alt: "Dashboard",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/7/Rapport.png",
+          alt: "Rapport",
+          isBlured: false,
+          isMobile: false,
+        },
+      ],
       startdate: "2021-09-01",
-      storyBehindIt: "I first encountered data work while analyzing app usage logs. The insights I gained pushed me to explore more."
+      storyBehindIt: "My journey into the art of Data Divination began not in a grand hall of scholars, but at a quiet desk while working on the back end of a project. I was tasked with a strange challenge — to turn streams of raw, tangled numbers into something others could see and understand, or to transform a clear visualization back into precise code.\n\nAt first, it was like staring at an unreadable map, lines and figures scattered without meaning. But soon, I learned the runes of analysis and the symbols of visualization. The more I worked, the more I realized that every dataset tells a story — some are whispers, some are shouts, but all can be heard if you know the language.\n\nFrom that day forward, I have used my skills as a data seer to illuminate the unseen, guiding projects and decisions with the light of knowledge drawn from the shadows of raw information."
     }
   },
   {

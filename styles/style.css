@@ -156,10 +156,6 @@ textarea {
   resize: none;
 }
 
-img {
-  width: 100%;
-}
-
 .alert-bar {
   background-color: var(--warning);
   color: var(--rust-light);

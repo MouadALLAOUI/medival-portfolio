@@ -56,8 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
       <h3>Gallery</h3>
       <div class="imgs-gal">
         ${element.overview.imgs.map(img =>
-        `<div class="gal-item ${img.isBlur ? "blured" : ""}">
-          <img src="../media/${img.src}" alt="${img.alt}" />
+        `<div class="gal-item ${img.isBlured ? "blured" : ""}">
+            <a href="${img.src}" target="_blank">
+              <img src="../media/${img.src}" alt="${img.alt}" class="${img.isMobile && "mobile-img"}" />
+            </a>
           </div>`).join('')}
       </div>`
       : '';

@@ -7,7 +7,13 @@
   <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
   <title>Mouad the Coder | Medieval Portfolio</title>
   <link rel="stylesheet" href="./styles/fonts.css" />
+  <link rel="stylesheet" href="./styles/global.css" />
   <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/headernav.css" />
+  <link rel="stylesheet" href="./styles/sections/hero.css" />
+  <link rel="stylesheet" href="./styles/sections/presentation.css" />
+  <link rel="stylesheet" href="./styles/sections/skills.css" />
+  <link rel="stylesheet" href="./styles/chatbot.css" />
   <link rel="stylesheet" href="./styles/blogs.css" />
   <script src="./scripts/animation.js" defer></script>
   <script type="module" src="./scripts/script.js" defer></script>
@@ -29,7 +35,12 @@
   </div>
   <!-- navigation -->
   <nav class="nav-container" id="nav-container">
-    <div class="nav-title"><img src="./media/favicon.ico" />Mouad the Coder</div>
+    <div class="nav-title">
+      <img src="./media/favicon.ico" alt="logo" />
+      <p>
+        Mouad the Coder
+      </p>
+    </div>
     <div class="nav-scroll">
       <div class="nav-links">
         <a href="#hero" class="nav-link">Oracle</a>
@@ -51,15 +62,13 @@
     <section id="hero" class="section hero-section">
       <div class="parchment-container">
         <h1 class="hero-title">Mouad the Coder</h1>
-        <div class="crystal-ball">
-          <!-- Crystal ball visual will be added with CSS -->
-        </div>
+        <div class="crystal-ball"></div>
         <p class="hero-subtitle">
           Ask the Oracle anything about Mouad
         </p>
 
-        <div class="chat-container">
-          <div class="chat-header">The Oracle's Crystal Ball</div>
+        <div class="chat-container" id="chat-container">
+          <div class="chat-header" id="chat-header">The Oracle's Crystal Ball</div>
           <div class="chat-messages" id="chat-messages">
             <div class="message bot-message">
               <div class="info-panel">
@@ -74,10 +83,6 @@
                   How to use this chatbot:
                 </h3>
                 <ul>
-                  <!-- <li>
-                    <strong>Set context:</strong> Type <code>context:</code> followed by paragraphs separated by blank
-                    lines (this will be used just to play around with the bot, it will not be saved)
-                  </li> -->
                   <li>
                     <strong>Ask questions:</strong> About the context or general inquiries about Mouad the Coder
                   </li>
@@ -98,7 +103,7 @@
             </div>
           </div>
 
-          <div class="chat-input">
+          <div class="chat-input" id="chat-input">
             <textarea type="text" class="scroll-input" id="user-input" name="userQuestion" aria-label="Ask the Oracle"
               placeholder="Inquire about skills, projects, or experience..." aria-multiline="false"></textarea>
 
@@ -107,15 +112,14 @@
           <div class="suggestion-box" id="suggestions">
             <div class="suggestion">Who is Mouad?</div>
             <div class="suggestion">List projects</div>
-            <div class="suggestion">What is cybersecurity?</div>
-            <div class="suggestion">Explain JennNative</div>
+            <div class="suggestion">List cybersecurity project?</div>
           </div>
-          <div class="context-indicator">
+          <div class="context-indicator" id="context-indicator">
             <div>Current Context: <strong id="contextStatus">Default Profile</strong></div>
             <div class="context-stats">
-              <div class="stat-box">Paragraphs <span class="stat-value" id="paraCount">1</span></div>
-              <div class="stat-box">Sentences <span class="stat-value" id="sentenceCount">5</span></div>
-              <div class="stat-box">Entities <span class="stat-value" id="entityCount">8</span></div>
+              <div class="stat-box">Paragraphs <span class="stat-value" id="paraCount">0</span></div>
+              <div class="stat-box">Sentences <span class="stat-value" id="sentenceCount">0</span></div>
+              <div class="stat-box">Entities <span class="stat-value" id="entityCount">0</span></div>
             </div>
           </div>
         </div>
@@ -187,18 +191,21 @@
     <!-- Skills Section -->
     <section id="skills" class="section">
       <div class="section-content">
-        <div class="parchment" id="skills-parchment">
-          <h2 class="section-title">Scroll of Skills</h2>
+        <div class="parchment visible" id="skills-parchment">
+          <h2 class="section-title">Arcane Codex of Skills</h2>
           <p class="section-intro">Through years of arcane study and mystical practice, I have mastered these powerful
-            arts:
-            <code>click card bellow for more details</code>
+            arts: <code>click card bellow for more details</code>
           </p>
 
           <div class="skills-template">
             <div class="skills-overview"></div>
-            <div class="skills-grid"></div>
+            <div class="skills-grid-container">
+              <div class="skills-grid"></div>
+              <div class="pagination"></div>
+            </div>
           </div>
         </div>
+        <script type="module" src="./scripts/skills.js" defer></script>
       </div>
     </section>
 
@@ -219,7 +226,7 @@
     </section>
 
     <!-- Learning Section -->
-    <section id="learning" class="section" style="display: none;">
+    <!-- <section id="learning" class="section" style="display: none;">
       <div class="parchment" id="learning-parch">
         <div>
           <h2 class="section-title">Learning grimoire</h2>
@@ -231,10 +238,10 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
 
     <!-- preference Section -->
-    <section id="preference" class="section" style="display: none;">
+    <!-- <section id="preference" class="section" style="display: none;">
       <div class="parchment" id="preference-parch">
         <div>
           <h2 class="section-title">Learning grimoire</h2>
@@ -246,7 +253,7 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
 
     <!-- About Section  (Coding Lore) -->
     <section id="about" class="section">
@@ -310,8 +317,8 @@
                 <a href="https://github.com/MouadALLAOUI" class="social-link" title="GitHub">⌖</a>
                 <a href="https://www.linkedin.com/in/mouad-allaoui-975514223/" class="social-link"
                   title="LinkedIn">🕴</a>
-                <!-- <a href="#" class="social-link" title="Twitter">🐦</a>
-                <a href="#" class="social-link" title="CodePen">✍</a> -->
+                <a href="#" class="social-link" title="Twitter">🐦</a>
+                <a href="#" class="social-link" title="CodePen">✍</a>
               </div>
 
               <h3 style="margin-top: 30px;">Raven Delivery</h3>

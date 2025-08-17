@@ -37,10 +37,9 @@
   --spacing-xl: 4rem;
 
   /* Border Radius */
-  --border-radius: 8px;
+  --border-rad-sm: 8px;
 
   /* Transitions */
-  --transition-speed: 0.3s;
 
   --primary: #4a6fa5;
   --primary-dark: #3a5a80;

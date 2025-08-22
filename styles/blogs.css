@@ -1,13 +1,138 @@
-.projects-overview .title {
-  text-align: center;
-  font-size: 3rem;
+.imgs-gal {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch; */
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* md */
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* lg */
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.gal-item {
+  /* max-height: 600px;
+  align-content: stretch;
+  transition: all 1s ease;
+  display: flex;
+  justify-content: center; */
+  border-radius: 24px;
+  overflow: hidden;
+  border-width: 2px;
+  border-color: rgba(180, 83, 9, 0.5);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-overview > h3 {
-  text-align: center;
+.gal-item:hover {
+  /* transform: scale(1.2);
+  z-index: 1; */
+  border-color: rgb(245 158 11 / 1);
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.gal-item.blured {
+  filter: blur(5px);
+}
+
+.gal-item.blured:hover {
+  filter: blur(0px);
+}
+
+.gal-item img {
   width: 100%;
-  font-size: 2rem;
-  margin-top: 15px;
+  height: 128px;
+  object-fit: contain;
+  transition-duration: 0.7s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gal-item img:hover {
+  transform: scale(1.05);
+}
+
+.gal-item .mobile-img {
+  aspect-ratio: 3/4;
+  height: 128px;
+}
+
+/* Fullscreen dark overlay */
+.image-viewer {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Active state - visible */
+.image-viewer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Centered content box */
+.image-viewer .img-container {
+  width: 80vw;
+  height: 80vh;
+  transform: scale(0) rotate(360deg);
+  transition: transform 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-viewer .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  position: relative;
+}
+
+.image-viewer .img-container img.portrait {
+  height: 100%;
+  width: 60vw;
+  aspect-ratio: 3/4;
+}
+
+.image-viewer.active .img-container {
+  transform: scale(1) rotate(0deg);
+}
+
+/* Close button */
+.image-viewer .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 100;
+  background: #f00;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Base styles for the markdown content container */
@@ -220,106 +345,7 @@
 .markdown-content tr:hover {
   background-color: var(--parchment-alpha);
 }
-
-.imgs-gal {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 10px;
-  justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
-}
-.gal-item {
-  max-height: 600px;
-  align-content: stretch;
-  transition: all 1s ease;
-  display: flex;
-  justify-content: center;
-}
-
-.gal-item:hover {
-  transform: scale(1.2);
-  z-index: 1;
-}
-.gal-item.blured {
-  filter: blur(5px);
-}
-
-.gal-item.blured:hover {
-  filter: blur(0px);
-}
-
-.gal-item img {
-  max-height: 600px;
-  width: 100%;
-  aspect-ratio: 4/3;
-}
-.gal-item .mobile-img {
-  aspect-ratio: 3/4;
-  height: 100%;
-}
-
 /* Lists */
-.projects-overview ul,
-.projects-overview ol {
-  margin-bottom: var(--spacing-md);
-  padding-left: var(--spacing-lg);
-  color: var(--dark-brown);
-}
-
-.projects-overview ul li,
-.projects-overview ol li {
-  margin-bottom: var(--spacing-sm);
-}
-
-.overview-links {
-  list-style: none; /* Remove default list bullets */
-  padding: 0; /* Remove default padding */
-  margin: var(--spacing-lg) 0; /* Add some vertical margin */
-  display: flex;
-  flex-wrap: wrap; /* Allow links to wrap to the next line on smaller screens */
-  justify-content: center; /* Center the links horizontally */
-  gap: var(--spacing-md); /* Space between link items */
-}
-
-.overview-link {
-  margin: 0; /* Remove default margin from list items */
-}
-
-.overview-link-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm); /* Space between icon and text */
-  padding: var(--spacing-sm) var(--spacing-md);
-  background-color: var(--dark-brown); /* Dark background for the link block */
-  color: var(--parchment); /* Light text color */
-  border: 2px solid var(--gold); /* Gold border */
-  border-radius: var(--border-rad-sm); /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  font-family: var(--font-body);
-  font-weight: 700;
-  transition: all 0.3s ease; /* Smooth transitions for hover effects */
-  box-shadow: 0 2px 5px var(--shadow); /* Subtle shadow */
-}
-
-.overview-link-item:hover {
-  background-color: var(--gold); /* Gold background on hover */
-  color: var(--dark-brown); /* Dark text on hover */
-  border-color: var(--gold-light); /* Lighter gold border on hover */
-  transform: translateY(-2px); /* Slight lift effect on hover */
-  box-shadow: 0 4px 10px var(--shadow); /* More pronounced shadow on hover */
-}
-
-.overview-link-item.disabled {
-  cursor: url("../media/cursor/WenrexaAssetsMagicCursorsPack/36x36px/Cursor\ Cannot\ Use.png"),
-    auto;
-}
-
-.overview-link-item div {
-  /* Styles for the icon container */
-  font-size: 1.2em; /* Adjust icon size */
-  line-height: 1; /* Ensure icon aligns well */
-}
 
 .timestamp-date {
   display: flex;
@@ -337,39 +363,6 @@
   font-size: 20px;
   z-index: 99;
   border-radius: 5px;
-}
-
-.projects-overview .tech-stack {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: var(--spacing-md);
-}
-
-.projects-overview .tech-item {
-  font-weight: 700;
-}
-
-.thumbnail {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-
-  text-align: center;
-  width: 100%;
-  height: 50vh;
-  overflow: hidden;
-  font-size: 3rem;
-  align-items: center;
-}
-
-.thumbnail img {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-rad-sm);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  aspect-ratio: 16/9;
-  object-fit: fill;
 }
 
 @keyframes fadeIn {
@@ -411,13 +404,6 @@
 /* Large tablets and small desktops */
 
 @media (max-width: 1200px) {
-  .projects-overview .title {
-    font-size: 2rem;
-  }
-  .projects-overview > h3 {
-    font-size: 1.3rem;
-    margin-top: 15px;
-  }
   /* Base styles for the markdown content container */
   .markdown-content {
     margin: var(--spacing-md) auto;
@@ -480,16 +466,6 @@
     border: 3px solid var(--gold);
   }
 
-  .imgs-gal {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 10px;
-  }
-
-  .gal-item:hover {
-    transform: scale(1.1);
-  }
-
   .overview-links {
     padding: 0;
     margin: var(--spacing-lg) 0;
@@ -516,29 +492,6 @@
   .timestamp-date p {
     padding: 1px 15px;
     font-size: 16px;
-  }
-
-  .skill-overview .skill-name {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-
-  .thumbnail {
-    margin-bottom: 20px;
-    height: 50vh;
-  }
-
-  .skill-proficiency {
-    font-size: 1.7rem;
-    letter-spacing: 3px;
-  }
-
-  .skill-intro,
-  .skill-desc,
-  .skill-story {
-    font-size: 1rem;
-    line-height: 1.2;
-    margin: 5px 0;
   }
 
   .timeline-detailled-desc {
@@ -586,16 +539,6 @@
     line-height: 1;
   }
 
-  .imgs-gal {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
-  }
-
-  .gal-item:hover {
-    transform: scale(1.05);
-  }
-
   .timestamp-date {
     bottom: 8px;
   }
@@ -603,14 +546,6 @@
   .timestamp-date p {
     padding: 1px 7px;
     font-size: 12px;
-  }
-
-  .skill-overview .skill-name {
-    font-size: 2rem;
-  }
-
-  .thumbnail {
-    height: 30vh;
   }
 
   .timeline-detailled-desc {
@@ -622,5 +557,18 @@
     font-size: 0.6rem;
     line-height: 1.2;
     margin-top: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-viewer {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  .image-viewer .img-container {
+    width: 95vw;
+    height: 95vh;
   }
 }

@@ -96,7 +96,7 @@ const projects = [
     tags: ["PHP", "Laravel"],
     link: {
       icon: "🔓",
-      link: "https://github.com/MouadALLAOUI/vercelnextjs"
+      link: "https://github.com/MouadALLAOUI/Amz-automobile-front"
     },
     overview: {
       thumbnail: "",
@@ -242,7 +242,7 @@ const projects = [
     id: 9,
     title: "LaraCRUD",
     desc: "A very beginner-friendly Laravel CRUD project that using controller, model, and view to create a simple CRUD application. mergerd with vite js",
-    tags: ["PHP", "Laravel", "CRUD", "CSS", "vite js", "frontend", "backend"],
+    tags: ["PHP", "Laravel", "CRUD", "CSS", "vite js"],
     link: {
       icon: "🔓",
       link: "https://github.com/MouadALLAOUI/LaraCRUD"

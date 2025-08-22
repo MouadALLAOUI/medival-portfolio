@@ -1,5 +1,6 @@
 import { markdownToHtml } from "./markdowntohtml.js";
 import skills from "../content/skills.js";
+import renderImage from "./viewimage.js";
 
 const skillsGridContainerP = document.querySelector('.skills-grid-container');
 const skillsGridContainer = document.querySelector('.skills-grid');
@@ -9,10 +10,12 @@ const skillsOverviewContainer = document.querySelector('.skills-overview');
 let skillPerPage = 6;
 let currentPage = 1;
 let isActiveSkills = false;
+let activeSkillId = null;
 
 function overviewSkills(element) {
   const itemClass = `skill-${element.id}`;
   skillsOverviewContainer.innerHTML = "";
+  const overview = element.overview;
 
   if (
     skillsOverviewContainer.classList.contains("active") &&
@@ -21,6 +24,9 @@ function overviewSkills(element) {
     skillsOverviewContainer.classList.remove("active", itemClass);
     skillsGridContainerP.classList.remove("active", itemClass);
     isActiveSkills = false;
+    activeSkillId = null;
+    currentPage = 1;
+    update()
     return;
   }
 
@@ -32,8 +38,16 @@ function overviewSkills(element) {
   });
 
   document.querySelectorAll(".skill-card").forEach(c => c.classList.remove("active"));
-  const card = document.querySelector(`.skill-card[data-skill="${element.id}"]`);
-  if (card) card.classList.add("active");
+  // console.log("document", document.querySelectorAll(".skill-card").forEach(c => c.classList.remove("active")))
+  const card = document.querySelector(`.skill-card[data-skill="skill-${element.id}"]`);
+
+  // console.log("card", card)
+
+  if (card) {
+    card.classList.add("active");
+    activeSkillId = element.id;
+  };
+
 
   isActiveSkills = true;
   skillsOverviewContainer.classList.add("active", itemClass);
@@ -50,7 +64,7 @@ function overviewSkills(element) {
   // add thumbnail
 
   const skillThumbImg = document.createElement('img');
-  skillThumbImg.setAttribute('src', element.overview.thumbnail)
+  skillThumbImg.setAttribute('src', overview.thumbnail)
   skillThumbImg.setAttribute('alt', element.name + " thumbnail")
 
   skillThumb.append(skillThumbImg)
@@ -72,7 +86,7 @@ function overviewSkills(element) {
 
   const skillStartDate = document.createElement('p');
   skillStartDate.className = 'skill-startdate';
-  skillStartDate.innerHTML = `<strong>Started:</strong> ${element.overview.startdate || 'Unknown'}`;
+  skillStartDate.innerHTML = `<strong>Started:</strong> ${overview.startdate || 'Unknown'}`;
 
 
 
@@ -99,16 +113,16 @@ function overviewSkills(element) {
   skillNameContainer.append(starContainer)
   const skillIntro = document.createElement('p');
   skillIntro.className = 'skill-intro';
-  skillIntro.innerHTML = element.overview.intro || 'not defined';
+  skillIntro.innerHTML = overview.intro || 'not defined';
   skillNameContainer.append(skillIntro)
   skillOverviewCont.append(skillNameContainer)
 
   // add skill detailed desc
-  if (element.overview.desc) {
+  if (overview.desc) {
     const skillDetailledDscTitle = document.createElement('h3');
     skillDetailledDscTitle.textContent = "Detailled desciprion";
 
-    const skillOverDesc = markdownToHtml(element.overview.desc);
+    const skillOverDesc = markdownToHtml(overview.desc);
 
     const skillDetailledDscContainer = document.createElement('div');
     skillDetailledDscContainer.className = 'markdown-content';
@@ -118,40 +132,54 @@ function overviewSkills(element) {
     skillOverviewCont.append(skillDetailledDscContainer)
   }
   // Build features list HTML
-  if (element.overview.features && element.overview.features.length > 0) {
+  if (overview.features && overview.features.length > 0) {
     const skillFeaturesTitle = document.createElement('h3');
     skillFeaturesTitle.textContent = "Features";
 
     const skillFeaturesContainer = document.createElement('ul');
-    skillFeaturesContainer.innerHTML = element.overview.features.map(
+    skillFeaturesContainer.innerHTML = overview.features.map(
       (f, i) => `<li data-key="${i}">${f}</li>`).join('');
 
     skillOverviewCont.append(skillFeaturesTitle)
     skillOverviewCont.append(skillFeaturesContainer)
   }
   // Build images gallery HTML
-  if (element.overview.imgs && element.overview.imgs.length > 0) {
+  const imgs = overview.imgs;
+
+  if (imgs && imgs.length > 0) {
     const skillGalTitle = document.createElement('h3');
     skillGalTitle.textContent = "Gallery";
 
-    const skillGalContainer = document.createElement('div');
-    skillGalContainer.className = "imgs-gal";
-    skillGalContainer.innerHTML = element.overview.imgs.map(img =>
-      `<div class="gal-item ${img.isBlured ? "blured" : ""}">
-          <a href="${img.src}" target="_blank">
-            <img src="../media/${img.src}" alt="${img.alt}" class="${img.isMobile ? "mobile-img" : ""}" />
-          </a>
-        </div>`).join('');
+    const imgsStack = document.createElement('div');
+    imgsStack.className = "imgs-gal";
 
-    skillOverviewCont.append(skillGalTitle)
-    skillOverviewCont.append(skillGalContainer)
+    imgs.map((img, i) => {
+      const imgsStackItemContainer = document.createElement('div');
+      imgsStackItemContainer.className = "gal-item";
+      if (img.isBlur) {
+        imgsStackItemContainer.className += " blured"
+      }
+      imgsStackItemContainer.setAttribute("data-key", `item-${i}`)
+
+      const imgsStackItemImg = document.createElement('img');
+      imgsStackItemImg.setAttribute("src", img.src);
+      imgsStackItemImg.setAttribute("alt", img.alt ? img.alt : element.title);
+      if (img.isMobile) {
+        imgsStackItemImg.classList.add("mobile-img");
+      }
+      imgsStackItemContainer.addEventListener("click", e => renderImage(img.src, img.isMobile))
+      imgsStackItemContainer.append(imgsStackItemImg);
+      imgsStack.append(imgsStackItemContainer);
+    })
+
+    skillOverviewCont.append(skillGalTitle, imgsStack)
   }
   // skill-story
-  if (element.overview.storyBehindIt) {
+  if (overview.storyBehindIt) {
     const skillStoryTitle = document.createElement('h3');
     skillStoryTitle.textContent = "Story Behind It";
 
-    const skillStory = markdownToHtml(element.overview.storyBehindIt);
+    const skillStory = markdownToHtml(overview.storyBehindIt);
 
     const skillStoryContainer = document.createElement('div');
     skillStoryContainer.className = 'markdown-content';
@@ -172,7 +200,7 @@ function renderSkills(page) {
   paginatedSkills.forEach(element => {
     const skillCard = document.createElement('div');
     skillCard.className = `skill-card skill-${element.id}`;
-    skillCard.dataset.skill = element.id;
+    skillCard.dataset.skill = `skill-${element.id}`;
     skillCard.addEventListener("click", () => overviewSkills(element));
     skillCard.innerHTML = `
       <div class="skill-name-container">
@@ -203,71 +231,71 @@ function renderSkills(page) {
 
     skillsGridContainer.appendChild(skillCard);
   });
-
+  if (activeSkillId) {
+    const activeCard = skillsGridContainer.querySelector(`.skill-card[data-skill="skill-${activeSkillId}"]`);
+    if (activeCard) activeCard.classList.add("active");
+  }
 }
 function renderPagination() {
   skillsGridPag.innerHTML = "";
   const pageCount = Math.ceil(skills.length / skillPerPage);
+
   const nav = document.createElement("nav");
   nav.className = "pagination-container";
-  nav.setAttribute("aria-label", "Skills pagination");
 
-  const prev = document.createElement("a");
-  prev.href = "#";
-  prev.className = "pagination-container-link";
-  prev.textContent = "<";
-  prev.addEventListener("click", e => {
-    e.preventDefault();
-    if (currentPage > 1) {
-      currentPage--;
-      update();
+  function addPage(num, isActive = false, text = num) {
+    const a = document.createElement("a");
+    a.href = "#";
+    a.textContent = text;
+    a.className = "pagination-container-link" + (isActive ? " active" : "");
+    if (num && num !== currentPage) {
+      a.addEventListener("click", e => {
+        e.preventDefault();
+        currentPage = num;
+        update();
+      });
     }
-  });
-  nav.appendChild(prev);
+    nav.appendChild(a);
+  }
+  // Prev
 
-  for (let i = 1; i <= pageCount; i++) {
-    const pageLink = document.createElement("a");
-    pageLink.href = "#";
-    pageLink.className = "pagination-container-link" + (i === currentPage ? " active" : "");
-    pageLink.textContent = i;
-    pageLink.addEventListener("click", e => {
-      e.preventDefault();
-      currentPage = i;
-      update();
-    });
-    nav.appendChild(pageLink);
+  if (currentPage > 1) {
+    console.log(currentPage)
+    addPage(currentPage - 1, false, "<");
   }
 
-  const next = document.createElement("a");
-  next.href = "#";
-  next.className = "pagination-container-link";
-  next.textContent = ">";
-  next.addEventListener("click", e => {
-    e.preventDefault();
-    if (currentPage < pageCount) {
-      currentPage++;
-      update();
+  if (pageCount <= 5) {
+    for (let i = 1; i <= pageCount; i++) addPage(i, i === currentPage);
+  } else {
+    if (currentPage <= 1) {
+      for (let i = 1; i <= 3; i++) addPage(i, i === currentPage);
+    } else if (currentPage >= pageCount) {
+      for (let i = pageCount - 2; i <= pageCount; i++) addPage(i, i === currentPage);
+    } else {
+      addPage(currentPage - 1);
+      addPage(currentPage, true);
+      addPage(currentPage + 1);
     }
-  });
-  nav.appendChild(next);
+  }
+
+  // Next
+  if (currentPage < pageCount) {
+    addPage(currentPage + 1, false, ">");
+  }
+
   skillsGridPag.appendChild(nav);
-};
-
-function setSkillPerPage(currentWidth) {
-  if (currentWidth > 1024 && !isActiveSkills) {
-    skillPerPage = 8;
-  }
-  else if ((currentWidth > 1024 && isActiveSkills) || (currentWidth > 768 && !isActiveSkills)) {
-    skillPerPage = 6;
-  }
-  else if ((currentWidth > 768 && isActiveSkills) || (currentWidth > 400 && !isActiveSkills)) {
-    skillPerPage = 4;
-  }
-  else {
-    skillPerPage = 2;
-  }
 }
 
+function setSkillPerPage(currentWidth) {
+
+  if (currentWidth > 1024 && !isActiveSkills) { skillPerPage = 8; }
+  else if (currentWidth > 1024 && isActiveSkills) { skillPerPage = 6; }
+  else if (currentWidth > 768 && !isActiveSkills) { skillPerPage = 6; }
+  else if (currentWidth > 768 && isActiveSkills) { skillPerPage = 3; }
+  else if (currentWidth > 400 && !isActiveSkills) { skillPerPage = 4; }
+  else if (currentWidth > 400 && isActiveSkills) { skillPerPage = 2; }
+  else { skillPerPage = 2; }
+}
 
 function update() {
   setSkillPerPage(window.innerWidth);

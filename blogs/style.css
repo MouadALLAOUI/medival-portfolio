@@ -69,7 +69,6 @@ object,
 svg,
 video {
   display: block;
-  vertical-align: middle;
 }
 
 img,
@@ -116,7 +115,7 @@ body {
 menu,
 ol,
 ul {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -132,7 +131,6 @@ header {
   min-width: 100%;
   padding: 16px;
   z-index: 99;
-  /* height: 100%; */
 }
 
 header nav {
@@ -433,4 +431,149 @@ footer {
 
 .footer-container-icon a:hover {
   transform: scale(1.1);
+}
+
+/* ========== Mobile (≤480px) ========== */
+@media (max-width: 480px) {
+  header nav .container {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin: var(--spacing-sm) 0;
+  }
+
+  header nav ul a {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .intro-container {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .intro-container-desc h2 {
+    font-size: 18px;
+  }
+
+  .intro-container-desc p {
+    font-size: 14px;
+  }
+
+  .container-blogs {
+    grid-template-columns: 1fr; /* single column */
+    gap: 20px;
+  }
+
+  .container-blogs article .article-desc .title {
+    font-size: 18px;
+  }
+
+  .container-blogs article .article-desc .desc {
+    font-size: 14px;
+  }
+
+  .pagination-container-link {
+    height: 32px;
+    width: 32px;
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 16px;
+  }
+
+  .footer-container-icon {
+    gap: 8px;
+  }
+}
+
+/* ========== Tablet (481px–768px) ========== */
+@media (min-width: 481px) and (max-width: 768px) {
+  header nav .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav ul a {
+    margin: 8px;
+    font-size: 15px;
+  }
+
+  .intro-container {
+    padding: 20px;
+  }
+
+  .intro-container-desc h2 {
+    font-size: 20px;
+  }
+
+  .intro-container-desc p {
+    font-size: 15px;
+  }
+
+  .container-blogs {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 24px;
+  }
+
+  .container-blogs article .article-desc .title {
+    font-size: 20px;
+  }
+
+  .container-blogs article .article-desc .desc {
+    font-size: 15px;
+  }
+
+  .pagination-container-link {
+    height: 36px;
+    width: 36px;
+    font-size: 18px;
+  }
+}
+
+/* ========== Small Desktop (769px–1024px) ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header nav .container {
+    padding: 0 20px;
+  }
+
+  header nav ul a {
+    margin: 0 12px;
+    font-size: 16px;
+  }
+
+  .intro-container {
+    max-width: 44rem;
+    padding: 24px;
+  }
+
+  .container-blogs {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
+    gap: 28px;
+  }
+
+  .container-blogs article .article-desc .title {
+    font-size: 22px;
+  }
+
+  .container-blogs article .article-desc .desc {
+    font-size: 15px;
+  }
+
+  .pagination-container-link {
+    height: 38px;
+    width: 38px;
+    font-size: 18px;
+  }
 }

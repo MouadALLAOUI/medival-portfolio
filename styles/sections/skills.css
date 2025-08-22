@@ -13,13 +13,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
-  height: 80vh;
+  /* height: 80vh; */
   overflow-y: auto;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--spacing-lg);
 }
 

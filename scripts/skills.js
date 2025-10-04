@@ -306,6 +306,8 @@ function update() {
 document.addEventListener('DOMContentLoaded', () => {
   let resizeTimeout;
 
+  // overviewSkills(skills[7])
+
   update();
 
   window.addEventListener('resize', function () {

@@ -352,12 +352,12 @@ const skills = [
     id: 8,
     icon: "📜",
     name: "Code Enchantments",
-    description: "Crafting elegant and efficient code spells to solve complex problems.",
-    level: 3,
+    description: "<strong>Code Enchantments</strong> Crafting elegant and efficient code-spells o banish chaos and summon clarity.",
+    level: 4,
     overview: {
       thumbnail: "../media/skills/8/thumb.jpg",
-      intro: "Code Enchantments is about writing clean, maintainable code using best practices and patterns.",
-      desc: "I apply design principles like DRY, KISS, and SOLID to write modular and reusable code. Whether it’s scripting tools or building full apps, good code is always my foundation.",
+      intro: "<strong>Code Enchantments</strong> Crafting elegant and efficient code-spells o banish chaos and summon clarity.<br/> <strong>Code Enchantments</strong> is the art of writing clean, maintainable, and reusable code through sacred practices and timeless patterns.",
+      desc: "Code Enchantments are the sacred practices and methods that ensure a codebase remains clean, understandable, and reliable across time. They are not always visible on the surface—your app may function the same whether or not these practices are used—but their influence lies deeper, shaping how easily the code can be read, maintained, and expanded without introducing new bugs.\n\nMessy code, though functional, is like a crumbling foundation: it slows down development, makes debugging a nightmare, and turns collaboration into a burden. Over time, every developer realizes that disorder in the code eventually spreads into the workflow itself—reducing productivity, creating hidden risks, and making even simple tasks frustrating. Clean, enchanted code, on the other hand, improves comfort during development, speeds up problem-solving, and ensures future stability.\n\nThe role of Code Enchantments grows stronger in collaborative environments. When working on larger projects with multiple developers, the difference between structured, consistent code and chaotic fragments is enormous. Code that is difficult to read or inconsistent in its structure becomes a barrier for teammates, while code shaped by enchantments is a shared language that everyone can understand, modify, and extend without fear.\n\nPracticing Code Enchantments means embracing best practices that give your work a long lifespan. It means writing code that is reusable across different projects, adaptable to new requirements, and flexible enough to endure the inevitable evolution of technology. It also means developing habits that make clean code your default state of work, not just an afterthought.\n\nThe arsenal of enchantments includes powerful tools such as `TypeScript` for type safety, `regular expressions (regex)` for precise text manipulation, `SASS` and other CSS libraries for structured styling, and the disciplined use of `comments` and `documentation` to record the logic behind your spells. Tools like `eslint`, `prettier`, and `editorconfig` stand as guardians of consistency, ensuring that formatting and structure are never neglected.\n\nBut the realm of Code Enchantments is vast—beyond these examples lies a treasure of patterns, guidelines, and utilities crafted by generations of developers. Design patterns, clean architecture principles, unit testing frameworks, and dependency managers are all part of the enchanted library that a wise developer draws upon. Over time, these practices become second nature, flowing through your work as naturally as writing the code itself.\n\nIn the end, Code Enchantments are not just about discipline—they are about legacy. A well-enchanted codebase becomes timeless: a living grimoire that others can read, learn from, and build upon, ensuring that your work continues to thrive long after the initial spell has been cast.\n\n### 🧰 Code Enchantments Tools\n\n- **eslint** – the guardian against unclean code\n- **prettier** – the formatter’s wand\n- **editorconfig** / **indentation** – the keepers of consistency\n- **markdown** – scrolls of documentation\n\n### 📚 Code Enchantments Languages & Frameworks\n\n> **✦ Code Enchantments Core Runes**\n\n- eslint\n- typescript\n- sass\n- best practice methode\n\n> **✦ Code Enchantments Arcane Support**\n\n- prettier extention\n- Color palettes & style guides",
       features: [
         "Code Refactoring",
         "Design Patterns",
@@ -365,9 +365,34 @@ const skills = [
         "Documentation & Comments",
         "Linting & Formatting"
       ],
-      imgs: [],
-      startdate: "2017-11-01",
-      storyBehindIt: "I used to write messy code until I realized maintainability matters. Now I strive to write elegant solutions from the start."
+      imgs: [
+        {
+          src: "../media/Skills/8/eslint.png",
+          alt: "eslint",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/8/editorconfig.png",
+          alt: "editorconfig",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/8/markdown.png",
+          alt: "markdown",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/8/documentation.png",
+          alt: "documentation",
+          isBlured: false,
+          isMobile: false,
+        },
+      ],
+      startdate: "2020-01-01",
+      storyBehindIt: "When I first began my journey into the world of code, I knew nothing of Code Enchantments. My early works were a tangle of unspaced lines, missing indentations, and scattered fragments—especially in the days of raw HTML.\n\nGradually, HTML itself guided me: each opening and closing tag taught me the rhythm of structure. CSS followed naturally, but JavaScript and PHP required deeper discipline. Over time, formatting and organizing code became second nature.\n\nWhen I began collaborating with friends and releasing projects into the open realms of GitHub, I realized the true weight of clean code. To stand alongside other developers, I studied the ancient scrolls of best practices and invoked modern tools like `prettier`, `TypeScript`, and `SASS` to refine my craft.\n\nCode Enchantments became not just a habit, but a creed—ensuring that my work endures, scales, and speaks clearly across the ages."
     }
   },
   // -------------------------------------

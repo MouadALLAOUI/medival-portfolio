@@ -375,22 +375,42 @@ const skills = [
     id: 9,
     icon: "🧙‍♂️",
     name: "Mentorship",
-    description: "Guiding aspiring wizards and witches in their coding journeys, sharing knowledge and wisdom.",
-    level: 2,
+    description: "<strong>Mentorship</strong> — Guiding aspiring wizards and witches on their journeys of learning and mastery, sharing knowledge, wisdom, and encouragement.",
+    level: 4,
     overview: {
-      thumbnail: "../media/mentorship.png",
-      intro: "Mentorship is the magical act of teaching and empowering others to code confidently.",
-      desc: "This includes pair programming, code reviews, and guidance on projects and learning paths. I share insights through community engagement or direct mentorship.",
+      thumbnail: "../media/Skills/9/thumb.png",
+      intro: "<strong>Mentorship</strong> is the magical act of teaching and empowering others to grow with confidence—unlocking their true potential through patience, empathy, and guidance.</br><strong>Mentorship</strong> It is the art of sharing knowledge, providing feedback, and nurturing growth in others while continuing to learn yourself.",
+      desc: "Mentorship is the art of guiding others toward mastery—helping them find clarity, purpose, and balance on their learning path. It is not about showing off what you know, but about **passing on what experience has taught you** and helping others avoid the pitfalls you once faced.\n\nThis craft extends far beyond technical skill. It demands empathy, communication, and patience. It’s about **listening more than speaking**, allowing others to make mistakes safely, and gently steering them toward better solutions—without breaking their confidence or spirit.\n\nThrough mentoring, I’ve learned to adapt to **different personalities, ages, genders, and cultures**. Every person learns differently, and it’s my role to understand that rhythm—sometimes by guiding softly, sometimes by pushing a little harder, but always with kindness and respect.\n\nMentorship also taught me humility. To mentor others, I must remain a **lifelong learner**—curious, open-minded, and unafraid to admit mistakes. The moment you believe you know everything, you stop growing. But when you embrace the mindset of a learner, every conversation becomes a new opportunity for discovery.\n\nMy mentorship journey reaches beyond coding. In the gaming realm, I once took over leadership of a guild and mentored many players—helping them refine their strategies, work as a team, and ultimately reach the top ranks together. That experience taught me how leadership and mentorship intertwine: both require trust, consistency, and a deep belief in others’ potential.\n\nAnd in the real world, I now serve as a **teacher in a private school**, guiding students on their own paths of learning and creativity. Whether it’s through teaching, coding, or gaming, I find meaning in helping others evolve—not just in skill, but in mindset and self-belief.\n\nMentorship, to me, is not a role—it’s a calling. It is the quiet joy of seeing someone you’ve guided take flight on their own.\n\n### ✨ Mentorship Known Spells\n\n- Pair Programming & Collaboration\n- Knowledge Sharing & Debugging Guidance\n- Learning Path Design\n- Code Reviews & Constructive Feedback\n- Communication & Soft Skill Development\n- Adaptable Teaching & Leadership Styles\n\n### 🧰 Mentorship Tools\n\n- **AnyDesk / TeamViewer** — Remote live assistance\n- **Zoom / Google Meet** — Virtual mentorship sessions\n- **Slack / Discord** — Communication & ongoing community support\n- **GitHub** — Sharing, reviewing, and collaborating on code\n- **Face-to-Face Mentoring** — Personal interaction and hands-on teaching\n\n### 📚 Mentorship\n\n> **✦ Mentorship Core Runes**\n\n- Fundamentals of Programming\n- Clear Documentation & Constructive Feedback\n- Communication, Empathy, and Leadership",
       features: [
-        "Code Reviews & Feedback",
+        "Pair Programming & Collaboration",
+        "Knowledge Sharing & Debugging Guidance",
         "Learning Path Design",
-        "Team Pair Programming",
-        "Debugging Assistance",
-        "Soft Skill Development"
+        "Code Reviews & Constructive Feedback",
+        "Communication & Soft Skill Development",
+        "Adaptable Teaching & Leadership Styles",
       ],
-      imgs: [],
+      imgs: [
+        {
+          src: "../media/Skills/9/anydesk.png",
+          alt: "anydesk",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/9/cs teacher.png",
+          alt: "cs teacher",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/9/teacher.png",
+          alt: "teacher",
+          isBlured: false,
+          isMobile: false,
+        },
+      ],
       startdate: "2022-01-01",
-      storyBehindIt: "Helping a friend debug a project opened my eyes to the joy of mentorship. Since then, I’ve taken pride in being a supportive guide."
+      storyBehindIt: "From the very beginning, mentorship has been woven into my life. My father—himself a teacher and my first mentor—taught me how to read, write, and think critically. He shaped my curiosity, humility, and discipline. Even when he was strict, he was always fair and just, teaching me that mistakes are not failures but lessons that help us grow.\n\nFollowing in his footsteps came naturally. I started helping friends with homework, explaining concepts, and realizing that teaching others deepened my own understanding. Over time, I discovered that mentorship was not just something I enjoyed—it was something I *needed*.\n\nSince then, I’ve carried that same passion into everything I do—from coding to gaming, from teamwork to teaching. Each mentee, student, or player I’ve guided has reminded me that mentorship is a cycle: we give, we learn, and we grow together.\n\nMentorship is my way of giving back to the world—one learner, one conversation, and one breakthrough at a time."
     }
   },
   {

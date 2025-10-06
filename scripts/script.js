@@ -4,7 +4,11 @@ import { closeImage } from "./viewimage.js";
 const TimelinesContainer = document.querySelector('.timeline');
 const imageViewerClose = document.getElementById('image-viewer-close');
 
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+});
 document.addEventListener('DOMContentLoaded', () => {
+
 
   imageViewerClose.addEventListener("click", e => closeImage());
 

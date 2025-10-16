@@ -11,6 +11,7 @@ let skillPerPage = 6;
 let currentPage = 1;
 let isActiveSkills = false;
 let activeSkillId = null;
+let isResizing = false;
 
 function overviewSkills(element) {
   const itemClass = `skill-${element.id}`;
@@ -48,6 +49,12 @@ function overviewSkills(element) {
     activeSkillId = element.id;
   };
 
+  // ensure the current page shows the selected skill
+  const skillIndex = skills.findIndex(s => s.id === element.id);
+  if (skillIndex !== -1) {
+    const pageNum = Math.floor(skillIndex / skillPerPage) + 1;
+    currentPage = pageNum;
+  }
 
   isActiveSkills = true;
   skillsOverviewContainer.classList.add("active", itemClass);
@@ -177,7 +184,7 @@ function overviewSkills(element) {
   // skill-story
   if (overview.storyBehindIt) {
     const skillStoryTitle = document.createElement('h3');
-    skillStoryTitle.textContent = "Story Behind It";
+    skillStoryTitle.textContent = "🛤️ Story Behind It";
 
     const skillStory = markdownToHtml(overview.storyBehindIt);
 
@@ -190,7 +197,12 @@ function overviewSkills(element) {
   }
 
   skillsOverviewContainer.append(skillOverviewCont);
-  update();
+
+  setTimeout(() => {
+    isResizing = true;
+    update();
+    isResizing = false;
+  }, 150);
 }
 function renderSkills(page) {
   skillsGridContainer.innerHTML = "";
@@ -231,6 +243,9 @@ function renderSkills(page) {
 
     skillsGridContainer.appendChild(skillCard);
   });
+
+
+
   if (activeSkillId) {
     const activeCard = skillsGridContainer.querySelector(`.skill-card[data-skill="skill-${activeSkillId}"]`);
     if (activeCard) activeCard.classList.add("active");
@@ -260,7 +275,7 @@ function renderPagination() {
   // Prev
 
   if (currentPage > 1) {
-    console.log(currentPage)
+    // console.log(currentPage)
     addPage(currentPage - 1, false, "<");
   }
 
@@ -299,6 +314,16 @@ function setSkillPerPage(currentWidth) {
 
 function update() {
   setSkillPerPage(window.innerWidth);
+  if (activeSkillId !== null) {
+    const skillIndex = skills.findIndex(s => s.id === activeSkillId);
+    if (skillIndex !== -1) {
+      const newPage = Math.floor(skillIndex / skillPerPage) + 1;
+      // Only jump if the resize caused a mismatch
+      if (isResizing && newPage !== currentPage) {
+        currentPage = newPage;
+      }
+    }
+  }
   renderSkills(currentPage);
   renderPagination();
 }
@@ -306,13 +331,15 @@ function update() {
 document.addEventListener('DOMContentLoaded', () => {
   let resizeTimeout;
 
+  // overviewSkills(skills[9]); // for test purpose only
   update();
 
   window.addEventListener('resize', function () {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-      currentPage = 1;
+      isResizing = true;
       update();
+      isResizing = false;
     }, 150);
   });
 });

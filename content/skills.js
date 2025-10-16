@@ -352,12 +352,12 @@ const skills = [
     id: 8,
     icon: "📜",
     name: "Code Enchantments",
-    description: "Crafting elegant and efficient code spells to solve complex problems.",
+    description: "<strong>Code Enchantments</strong> — Crafting elegant and efficient code-spells o banish chaos and summon clarity.",
     level: 3,
     overview: {
       thumbnail: "../media/skills/8/thumb.jpg",
-      intro: "Code Enchantments is about writing clean, maintainable code using best practices and patterns.",
-      desc: "I apply design principles like DRY, KISS, and SOLID to write modular and reusable code. Whether it’s scripting tools or building full apps, good code is always my foundation.",
+      intro: "<strong>Code Enchantments</strong> — Crafting elegant and efficient code-spells o banish chaos and summon clarity.<br /><strong>Code Enchantments</strong> is the art of writing clean, maintainable, and reusable code through sacred practices and timeless patterns.",
+      desc: "Code Enchantments are the sacred practices and methods that ensure a codebase remains clean, understandable, and reliable across time. They are not always visible on the surface—your app may function the same whether or not these practices are used—but their influence lies deeper, shaping how easily the code can be read, maintained, and expanded without introducing new bugs.\n\nMessy code, though functional, is like a crumbling foundation: it slows down development, makes debugging a nightmare, and turns collaboration into a burden. Over time, every developer realizes that disorder in the code eventually spreads into the workflow itself—reducing productivity, creating hidden risks, and making even simple tasks frustrating. Clean, enchanted code, on the other hand, improves comfort during development, speeds up problem-solving, and ensures future stability.\n\nThe role of Code Enchantments grows stronger in collaborative environments. When working on larger projects with multiple developers, the difference between structured, consistent code and chaotic fragments is enormous. Code that is difficult to read or inconsistent in its structure becomes a barrier for teammates, while code shaped by enchantments is a shared language that everyone can understand, modify, and extend without fear.\n\nPracticing Code Enchantments means embracing best practices that give your work a long lifespan. It means writing code that is reusable across different projects, adaptable to new requirements, and flexible enough to endure the inevitable evolution of technology. It also means developing habits that make clean code your default state of work, not just an afterthought.\n\nThe arsenal of enchantments includes powerful tools such as `TypeScript` for type safety, `regular expressions (regex)` for precise text manipulation, `SASS` and other CSS libraries for structured styling, and the disciplined use of `comments` and `documentation` to record the logic behind your spells. Tools like `eslint`, `prettier`, and `editorconfig` stand as guardians of consistency, ensuring that formatting and structure are never neglected.\n\nBut the realm of Code Enchantments is vast—beyond these examples lies a treasure of patterns, guidelines, and utilities crafted by generations of developers. Design patterns, clean architecture principles, unit testing frameworks, and dependency managers are all part of the enchanted library that a wise developer draws upon. Over time, these practices become second nature, flowing through your work as naturally as writing the code itself.\n\nIn the end, Code Enchantments are not just about discipline—they are about legacy. A well-enchanted codebase becomes timeless: a living grimoire that others can read, learn from, and build upon, ensuring that your work continues to thrive long after the initial spell has been cast.\n\n### 🧰 Code Enchantments Tools\n\n- eslint – the guardian against unclean code\n- prettier – the formatter’s wand\n- editorconfig / indentation – the keepers of consistency\n- markdown – scrolls of documentation\n\n### 📚 Code Enchantments Languages & Frameworks\n\n> **✦ Code Enchantments Core Runes**\n\n- eslint\n- typescript\n- sass\n- best practice methode\n\n> **✦ Code Enchantments Arcane Support**\n\n- prettier extention\n- Color palettes & style guides",
       features: [
         "Code Refactoring",
         "Design Patterns",
@@ -365,12 +365,36 @@ const skills = [
         "Documentation & Comments",
         "Linting & Formatting"
       ],
-      imgs: [],
+      imgs: [
+        {
+          src: "../media/Skills/8/eslint.png",
+          alt: "eslint",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/8/editorconfig.png",
+          alt: "editorconfig",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/8/markdown.png",
+          alt: "markdown",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/8/documentation.png",
+          alt: "documentation",
+          isBlured: false,
+          isMobile: false,
+        }
+      ],
       startdate: "2017-11-01",
-      storyBehindIt: "I used to write messy code until I realized maintainability matters. Now I strive to write elegant solutions from the start."
+      storyBehindIt: "When I first began my journey into the world of code, I knew nothing of Code Enchantments. My early works were a tangle of unspaced lines, missing indentations, and scattered fragments—especially in the days of raw HTML.\n\nGradually, HTML itself guided me: each opening and closing tag taught me the rhythm of structure. CSS followed naturally, but JavaScript and PHP required deeper discipline. Over time, formatting and organizing code became second nature.\n\nWhen I began collaborating with friends and releasing projects into the open realms of GitHub, I realized the true weight of clean code. To stand alongside other developers, I studied the ancient scrolls of best practices and invoked modern tools like `prettier`, `TypeScript`, and `SASS` to refine my craft.\n\nCode Enchantments became not just a habit, but a creed—ensuring that my work endures, scales, and speaks clearly across the ages."
     }
   },
-  // -------------------------------------
   {
     id: 9,
     icon: "🧙‍♂️",
@@ -417,44 +441,97 @@ const skills = [
     id: 10,
     icon: "🧩",
     name: "Problem Solving",
-    description: "Solving complex challenges with creative and efficient solutions, like a true coding wizard.",
+    description: "<strong>Problem Solving</strong> — The noble art of unraveling complexity through wisdom, logic, and enchanted creativity.",
     level: 4,
     overview: {
-      thumbnail: "../media/problem_solving.png",
-      intro: "Problem Solving is the essence of development—turning chaos into structure through logic and design.",
-      desc: "From algorithms to architecture, this skill is about analytical thinking, debugging, and implementing optimal solutions.",
+      thumbnail: "../media/Skills/10/thumb.png",
+      intro: "<strong>Problem Solving</strong> — The noble art of unraveling complexity through wisdom, logic, and enchanted creativity.<br /> Problem Solving is the wizard’s craft — transforming chaos into harmony through the alchemy of thought and design.",
+      desc: "In the grand realm of creation, **Problem Solving** stands as one of the most sacred arts.\n\nIt is the act of dissecting chaos into order — of conjuring elegant solutions from the tangled threads of complexity.\n\nTo master this discipline, one must wield both intellect and imagination.\n\nA true coding sorcerer knows that every challenge hides a secret rune waiting to be deciphered — every bug a mischievous imp begging to be tamed.\n\nWhether deciphering a stubborn error, optimizing a lagging spell of code, or architecting a grand new system, Problem Solving is about delving deep into the mysteries of logic and emerging with clarity and power.\n\nIt is more than a skill — it is a philosophy, a way of thinking.\n\nTo think like a developer is to foresee storms before they strike, to trace the roots of mischief in the system, and to craft structures that stand firm through time and change.\n\nProblem Solving is the alchemy of the mind —\n\nturning a *bug into a feature*, a *challenge into an opportunity*, and *confusion into clarity*.\n\n\n### 🧰 Enchanted Tools & Relics\n\n- **Browser DevTools** — The crystal lens of insight, revealing hidden flaws within the digital realm\n- **Postman** — The courier of spells, testing magical requests across realms of APIs\n- **Figma / Sketch** — The illusionist’s parchment for crafting visual enchantments\n- **Git** — The sacred tome of version control, preserving every incantation of change\n- **JIRA / Trello** — The scrolls of organization, where quests and challenges are chronicled\n\n\n### 📚 Core Runes of Mastery\n\n- Critical Thinking Glyphs\n- Logical Reasoning Sigils\n- Debugging Incantations\n- Algorithmic Wisdom\n- System Design Principles",
       features: [
-        "Algorithm Design",
-        "Data Structures",
-        "Bug Diagnosis",
-        "Optimizing Code",
-        "Architectural Thinking"
+        "Algorithmic Enchantment",
+        "Data Structure Weaving",
+        "Bug Exorcism",
+        "Code Optimization Rituals",
+        "Architectural Divination"
       ],
-      imgs: [],
+      imgs: [
+        {
+          src: "../media/Skills/10/devConsole.png",
+          alt: "browser dev tools",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/10/postman.png",
+          alt: "postman",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/10/debuggingTools.png",
+          alt: "debugging Tools",
+          isBlured: false,
+          isMobile: false,
+        },
+      ],
       startdate: "2016-01-01",
-      storyBehindIt: "Puzzles, logic games, and real bugs led me to become a dedicated problem-solver—one challenge at a time."
+      storyBehindIt: "From the first breath of existence, humanity has been tested with trials.\n\nSome simple, others labyrinthine.\n\nEach problem — a quest. Each failure — a lesson. Each solution — a victory etched into the soul.\n\nIn my own journey, I have faced dragons of confusion and dungeons of error.\n\nSome fell quickly to my blade of logic, others demanded patience, study, and at times, the counsel of fellow mages.\n\nYet with every encounter, I grew — wiser, sharper, and more attuned to the rhythm of the unseen.\n\nSo it is with code.\n\nEvery error message, every frozen loop, every inexplicable crash — a teacher in disguise.\n\nThrough these ordeals, I learned new spells, refined my tools, and forged my mind into a sharper weapon.\n\nProblem Solving became not just an art — but a calling.\n\nIt is a discipline, a ritual, a way of perceiving the world.\n\nIt transforms frustration into fascination, and despair into discovery.\n\nFor once a wizard tastes the thrill of conjuring a solution from chaos…\n\nthe journey becomes eternal.\n\nSolving problems becomes an *addiction of purpose* — a pursuit that kindles joy, mastery, and meaning.\n\nEach victory is a spark of magic, reminding the wizard that even the darkest bug can lead to the brightest revelation."
     }
   },
   {
     id: 11,
     icon: "💻",
     name: "Windows Dungeon",
-    description: "Exploring and mastering the mystical realms of the Windows operating system. powershell and cmd incantations are my tools of choice.",
+    description: "<strong>Windows Dungeon</strong> — Exploring and mastering the mystical realms of the Windows operating system. <code>PowerShell</code> and <code>CMD</code> incantations are my tools of choice.",
     level: 5,
     overview: {
-      thumbnail: "../media/windows_dungeon.png",
-      intro: "Windows Dungeon is my deep dive into system configuration, scripting, and automation on Windows OS.",
-      desc: "This includes mastering cmd commands, PowerShell scripting, registry tweaks, task automation, and process monitoring.",
+      thumbnail: "../media/Skills/11/thumb.png",
+      intro: "<strong>Windows Dungeon</strong> — Exploring and mastering the mystical realms of the Windows operating system. <code>PowerShell</code> and <code>CMD</code> incantations are my tools of choice.<br /><strong>Windows Dungeon</strong> is my deep dive into system configuration, scripting, and automation within the cryptic corridors of the Windows OS.",
+      desc: "**Windows Dungeon** is the sacred art of navigating and mastering the intricate labyrinth of the Windows operating system. It demands an understanding of the core mechanisms, secret chambers, and hidden levers that make Windows come alive. From the spellbinding command-line incantations of `PowerShell` and `CMD` to the enchanted chambers of Control Panel and Settings, this craft allows me to wield the full might of the Windows realm.\n\nThis discipline spans system administration, troubleshooting, and automation. It requires not only technical prowess but also patience, precision, and a keen eye for how Windows orchestrates its symphony of processes, resources, and defenses.\n\nI commune daily with the spirits of the system—taming services, managing user realms, and configuring the sacred network pathways. Through scripting, I automate repetitive rituals, enhance productivity, and bring order to digital chaos.\n\nTransforming or restoring operating systems—**from ancient XP ruins to the modern towers of Windows 11**—is a power I’ve long mastered. No matter the version, I’ve explored them all and faced every peril they offer.\n\nFrom the dreaded *Blue Screen of Death* to driver duels, I’ve forged the tools and wisdom to restore balance to any corrupted system.\n\n### 🧰 Windows Dungeon Tools\n\n- Windows PowerShell\n- Command Prompt (CMD)\n- Event Viewer\n- Performance Monitor\n- Task Scheduler\n- Recovery Environment\n- Windows Deployment Services\n- System Reset & Format (via USB or ISO)\n\n### 📚 Windows Dungeon Core Runes\n\n> ✦ Command Prompt (CMD)\n> ✦ PowerShell\n> ✦ Task Scheduler\n> ✦ Safe Mode\n> ✦ Recovery Environment",
       features: [
         "PowerShell Scripting",
-        "Batch Scripting",
-        "Windows Registry Tweaks",
+        "Batch Spellcraft (Batch Scripting)",
+        "Registry Runes & Tweaks",
         "Task Scheduler Automation",
-        "System Monitoring & Logs"
+        "System Monitoring & Log Reading",
+        "System Troubleshooting",
+        "Windows Recovery Rituals",
+        "Safe Mode Invocation",
       ],
-      imgs: [],
-      startdate: "2014-10-01",
-      storyBehindIt: "I began scripting on Windows as a teen, using batch files to automate game setups. That led to deeper system mastery."
+      imgs: [
+        {
+          src: "../media/Skills/11/blue screen.png",
+          alt: "blue screen",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/11/win7setup.jpg",
+          alt: "Windows 7 Setup",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/11/winXpHome.jpg",
+          alt: "Windows XP Home",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/11/win10setting.png",
+          alt: "Windows 10 Settings",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/11/win10controlPanel.png",
+          alt: "Windows 10 Control Panel",
+          isBlured: false,
+          isMobile: false,
+        },
+      ],
+      startdate: "2005-10-18",
+      storyBehindIt: "Windows — the world’s most beloved and widespread operating system — became the first magical realm I ever explored. Praised for its simplicity and adaptability, it was the gateway to my lifelong journey in computing.\n\nMy first encounter was at the age of **four**, when our family’s ancient PC ran **Windows 2000**. Despite my parents’ strict rules, curiosity burned brighter than fear. I’d sneak into the study, often facing dire consequences, just to feel the hum of that machine. Those moments were my first sparks of digital wonder.\n\nBy the age of **six**, our household was blessed with a new artifact — a PC running **Windows XP**. Its shimmering interface and new powers captivated me. I spent countless hours exploring menus, experimenting with settings, and reviving the system whenever it froze.\n\nIf my fixes failed, I would call upon my elder brother — my first mentor in troubleshooting. Between adventures, I played legendary titles like `Age of Empires II`, `Stronghold Crusader`, `Counter-Strike 1.6`, and even `Banana` and `SNES` classics.\n\nAs time passed, I delved deeper into Windows magic — mastering its hidden mechanisms. I learned to command PowerShell and CMD, automate with Task Scheduler, observe system lifeforce through Event Viewer and Performance Monitor, and recover from calamities using the Recovery Environment.\n\nI explored every chamber: the Registry Editor, Group Policy, Device Manager, Disk Management, Defender, Firewall, Backup, Restore, and even the sacred art of dual-booting and virtualization.\n\nFrom *XP* to *11*, from *installation* to *resurrection*, I’ve walked every path of the **Windows Dungeon**, emerging as its steadfast guardian."
     }
   },
   {
@@ -474,7 +551,12 @@ const skills = [
         "Log Monitoring",
         "User/Permission Management"
       ],
-      imgs: [],
+      imgs: [{
+        src: "../media/Skills/10/devConsole.png",
+        alt: "browser dev tools",
+        isBlured: false,
+        isMobile: false,
+      },],
       startdate: "2019-02-01",
       storyBehindIt: "My Linux journey started from frustration with Windows limits. I embraced the CLI and haven’t looked back."
     }
@@ -496,7 +578,12 @@ const skills = [
         "Volume & Network Setup",
         "Containerized Dev Environments"
       ],
-      imgs: [],
+      imgs: [{
+        src: "../media/Skills/10/devConsole.png",
+        alt: "browser dev tools",
+        isBlured: false,
+        isMobile: false,
+      },],
       startdate: "2023-04-01",
       storyBehindIt: "Needing consistency across dev setups, I learned Docker to package apps once and run them anywhere."
     }
@@ -518,7 +605,12 @@ const skills = [
         "Virtual Networking",
         "Multi-OS Testing"
       ],
-      imgs: [],
+      imgs: [{
+        src: "../media/Skills/10/devConsole.png",
+        alt: "browser dev tools",
+        isBlured: false,
+        isMobile: false,
+      },],
       startdate: "2022-06-01",
       storyBehindIt: "I needed to test projects on different OS setups, so I explored virtualization and learned to master isolated environments."
     }

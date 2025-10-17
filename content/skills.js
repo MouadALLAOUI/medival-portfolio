@@ -538,12 +538,12 @@ const skills = [
     id: 12,
     icon: "🐧",
     name: "Linux Slayer",
-    description: "Exploring and mastering the mystical realms of the Linux operating system. Bash and terminal incantations are my tools of choice.",
+    description: "<strong>Linux Slayer</strong>best open-source OS for developers and hackers. mastering its command line is essential.",
     level: 3,
     overview: {
-      thumbnail: "../media/linux_slayer.png",
-      intro: "Linux Slayer is about leveraging the terminal to rule the open-source realm.",
-      desc: "I navigate the Linux filesystem, write shell scripts, configure services, and use tools like grep, awk, and cron.",
+      thumbnail: "../media/Skills/12/thumb.png",
+      intro: "<strong>Linux Slayer</strong>best open-source OS for developers and hackers. mastering its command line is essential.<br /><strong>Linux Slayer</strong> is my journey into the powerful world of Linux—navigating its command line, mastering its services, and harnessing its open-source magic.",
+      desc: "**Linux Slayer** is the art of mastering Linux, the ultimate open-source operating system, through its powerful command-line interface. It is the discipline of navigating the system’s inner workings, understanding its architecture, and wielding tools that allow precise control over every aspect of the OS.\n\nThis skill covers a wide range of abilities:\n\n\n- **System Administration:** Managing users, groups, permissions, services, and processes efficiently.\n- **Shell Scripting:** Automating tasks, orchestrating workflows, and writing custom tools in Bash or other shells.\n- **Package Management:** Installing, updating, and maintaining software across different distributions using tools like `apt`, `yum`, and `dnf`.\n- **Networking & Security:** Configuring networks, managing firewalls, analyzing traffic, and securing systems against intrusions.\n- **Monitoring & Troubleshooting:** Reading logs, monitoring performance, debugging errors, and recovering from system failures.\n\nLinux Slayer is more than just knowledge of commands—it’s the ability to think like the system itself, anticipate its behavior, and manipulate it to achieve goals efficiently. It requires curiosity, patience, and a hands-on approach: you truly cannot claim mastery without exploring, experimenting, and solving real-world problems on Linux.\n\nThis skill is essential for anyone serious about cybersecurity, programming, systems management, or advanced computing. The terminal becomes a sword, and the filesystem a realm to be mastered, where every command is a spell and every script a powerful incantation.\n\n> *Remember: true mastery comes from experience. No one can call themselves a developer, sysadmin, or hacker without first walking the Linux path.*\n\n### 🐧 Linux Types\n\nLinux distributions can be broadly categorized into **Debian-based** and **Non-Debian-based** systems, each with its own philosophy, tools, and package management.\n\n**1. Debian-Based Distributions**\n\nThese distros share a common foundation from **Debian** and usually use `apt` or `dpkg` for package management. They are known for stability, large repositories, and community support. Examples include:\n\n- **Ubuntu** – beginner-friendly, widely used for development and servers.\n- **Kali Linux** – security-focused, preloaded with penetration testing tools.\n- **Linux Mint** – user-friendly, with a polished desktop experience.\n- **Elementary OS** – elegant design, lightweight and intuitive interface.\n\n**2. Non-Debian-Based Distributions**\n\nThese distributions are not based on Debian and often use other package managers like `yum`, `dnf`, or `pacman`. They offer flexibility and unique philosophies for users seeking alternatives. Examples include:\n\n- **Fedora** – cutting-edge, with the latest software and technologies.\n- **Arch Linux** – minimal, highly customizable, for advanced users.\n- **openSUSE** – enterprise-grade options, with a focus on stability and tools.\n- **CentOS / Rocky Linux / AlmaLinux** – server-oriented, reliable and robust.\n\n> Understanding the type of Linux you’re using is crucial for package management, system administration, and compatibility with tools. Mastering both Debian and non-Debian systems allows a Linux Slayer to rule all realms of open-source.\n\n### 🧰 Linux Slayer Tools\n\n- Bash, SSH\n- Package Managers (apt, yum)\n- Text Editors (vim, nano)\n- Network Tools (ping, netstat)\n- File Management (ls, cp, mv, rm)\n- Version Control (git)\n- Virtualization (VirtualBox, Docker)\n\n### 📚 Linux Slayer Core Runes\n\n> ✦ Terminal (Bash)\n> ✦ SSH (Secure Shell)\n> ✦ Package Managers (apt, yum)\n> ✦ Text Editors (vim, nano)\n> ✦ File Management (ls, cp, mv, rm)",
       features: [
         "Shell Scripting (Bash)",
         "Package Management (apt, yum)",
@@ -551,53 +551,99 @@ const skills = [
         "Log Monitoring",
         "User/Permission Management"
       ],
-      imgs: [{
-        src: "../media/Skills/10/devConsole.png",
-        alt: "browser dev tools",
-        isBlured: false,
-        isMobile: false,
-      },],
+      imgs: [
+        {
+          src: "../media/Skills/12/kalilinux.jpg",
+          alt: "kali linux",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/12/filesystemstructure.png",
+          alt: "file system structure",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/12/linuxCommand.png",
+          alt: "linux command",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/12/linuxDistr.jpg",
+          alt: "linux distribution",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/12/mint.jpg",
+          alt: "kali linux",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/12/ubuntu.jpg",
+          alt: "kali linux",
+          isBlured: false,
+          isMobile: false,
+        },
+      ],
       startdate: "2019-02-01",
-      storyBehindIt: "My Linux journey started from frustration with Windows limits. I embraced the CLI and haven’t looked back."
+      storyBehindIt: "Linux — the world’s most beloved and widespread open-source operating system.\n\nMy story with Linux began when I was **12 years old**, after hearing people talk about the *deep web* and *dark web*. I got curious and wanted to explore it myself. Installing the Tor browser on Windows worked fine, but I didn’t feel secure. People kept saying it was dangerous and could even lead to trouble, so I started looking for a more private and safe way to do it. At that time, I didn’t fully understand how things worked yet.\n\nOne day, my big brother — who was studying networking — installed **Kali Linux** on his laptop. It was my first time seeing what I thought was a “real hacker” in action (okay, he only hacked the Wi-Fi password 😅). But for a teenager who had only seen that kind of thing in movies, it was mind-blowing. I still remember him using **aircrack** and other cracking tools to get the password. I was amazed — I wanted to learn how to do that too.\n\nAfter that day, I started searching for information about Linux. I discovered that Kali Linux was based on **Debian**, so I downloaded **Ubuntu** and installed it on my old laptop. I began learning the basics of Linux — commands, the file system, and how everything worked. I was fascinated by the power of the terminal and how you could do *anything* with it.\n\nAfter some time, I lost interest in Linux until my first year at university. When I started learning programming and web development, I found that most tools and frameworks were built for Linux. So I decided to give it another try. I installed different distros — starting again with **Kali Linux**, then **Ubuntu**, **Mint**, and **Fedora**.\n\nWhen I reached my first bachelor year, I specialized in **cybersecurity**, and that was the moment I began using Linux more seriously. I learned how to use different tools and scripts, configure and manage Linux servers, and secure them against attacks.\n\nI still remember the first time I used **nmap**, **Wireshark**, **Metasploit**, and other powerful tools — it felt like a whole new world opened before me. I was hooked, and I wanted to learn more and more."
     }
   },
   {
     id: 13,
     icon: "🐳",
     name: "Docker",
-    description: "Containerizing applications and managing microservices with Docker.",
+    description: "<strong>Docker</strong>Containerizing applications and orchestrating microservices across realms of code and cloud.",
     level: 2,
     overview: {
-      thumbnail: "../media/docker_magic.png",
-      intro: "Docker is my tool for crafting portable, isolated environments for apps.",
-      desc: "I use Docker to define and manage containers, build Dockerfiles, compose services, and simulate environments for development and deployment.",
+      thumbnail: "../media/Skills/13/thumb.png",
+      intro: "<strong>Docker</strong>Containerizing applications and orchestrating microservices across realms of code and cloud.<br/>Docker is about crafting lightweight, portable containers that bring consistency, speed, and isolation to modern development workflows.",
+      desc: "**Docker** is the art of *containerization* — packaging applications and their dependencies into self-contained, lightweight units called **containers**. These containers ensure that software runs consistently across any environment — from a developer’s local machine to production servers or cloud platforms.\n\nWith Docker, I can define an application’s entire environment through **Dockerfiles** and **docker-compose** configurations — including the base operating system, required libraries, and dependencies. Each container runs in isolation, ensuring clean, predictable behavior regardless of the underlying system.\n\nDocker plays a vital role in **modern DevOps** and **microservices architectures**, enabling developers to:\n\n- Build and deploy faster,\n- Scale efficiently, and\n- Ensure consistent performance across platforms.\n\nIt bridges the gap between development and production, eliminating the notorious “it works on my machine” problem. Whether I’m deploying a single app or orchestrating multiple services, Docker ensures reliability, portability, and simplicity.\n\n> In essence, Docker empowers developers to **build once and run anywhere** — a true evolution in software deployment.\n\n### 🧰 Docker Tools\n\n- Docker Desktop\n- Docker CLI\n- Docker Compose\n- Docker Hub\n- Container Orchestration (Kubernetes Basics)\n\n### 📚 Docker Core Runes\n\n> ✦ Docker CLI Commands\n> ✦ Dockerfile\n> ✦ Docker Compose\n> ✦ Docker Hub",
       features: [
-        "Dockerfile Creation",
+        "Dockerfile Creation & Optimization",
         "Image & Container Management",
-        "Docker Compose",
-        "Volume & Network Setup",
-        "Containerized Dev Environments"
+        "Docker Compose for Multi-Container Apps",
+        "Volume & Network Configuration",
+        "Containerized Development Environments"
       ],
-      imgs: [{
-        src: "../media/Skills/10/devConsole.png",
-        alt: "browser dev tools",
-        isBlured: false,
-        isMobile: false,
-      },],
+      imgs: [
+        {
+          src: "../media/Skills/13/cheatsheet.png",
+          alt: "docker cheatsheet",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/13/dockerarchitechur.jpg",
+          alt: "docker architecture",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/13/dockerworkflow.png",
+          alt: "docker workflow",
+          isBlured: false,
+          isMobile: false,
+        },
+      ],
       startdate: "2023-04-01",
-      storyBehindIt: "Needing consistency across dev setups, I learned Docker to package apps once and run them anywhere."
+      storyBehindIt: "Achieving this skill wasn’t something I planned from the start.\n\nIt all began during my **second year of development studies**, when our programming instructor first introduced us to Docker. At the time, it felt complex and abstract, so I gave up on it for a while.\n\nLater, as I advanced in my studies — particularly during my **cybersecurity specialization** — we started working on **big data** projects that required containerization. That’s when I realized Docker wasn’t just another tool; it was a cornerstone of modern infrastructure.\n\nI began learning it seriously, experimenting with containers, building small projects, and debugging my own environments. Over time, I became comfortable using Docker to deploy and manage applications seamlessly.\n\nNow, I can confidently say I understand Docker’s core principles — from building images to managing containers — and appreciate its true power in creating scalable, isolated, and portable systems."
     }
   },
   {
     id: 14,
     icon: "🖥️",
     name: "Virtualization",
-    description: "Creating and managing virtual environments for development and testing.",
+    description: "<strong>Virtualization</strong>— Creating and managing virtual environments for development and testing.",
     level: 2,
     overview: {
-      thumbnail: "../media/virtualization.png",
-      intro: "Virtualization is about spinning up controlled digital realms for isolated testing and deployment.",
-      desc: "This includes managing VMs, configuring virtual networks, and simulating infrastructure for dev or test purposes using tools like VirtualBox or VMware.",
+      thumbnail: "../media/Skills/14/thumb.png",
+      intro: "<strong>Virtualization</strong>— Creating and managing virtual environments for development and testing.<br /> Virtualization is the arcane craft of forging digital realms within realms—safe, isolated worlds for testing, deployment, and exploration.",
+      desc: "**Virtualization** is the art of creating virtual versions of computing resources—such as servers, operating systems, storage devices, and networks—allowing multiple isolated environments to run on a single physical machine.\n\nIt’s like constructing a hidden chamber within your own workspace—a space where experiments can unfold freely, without affecting the world outside.\n\nThrough virtualization, I can install and run different operating systems, simulate various devices, and test complex configurations—all within a controlled and reversible environment.\n\nIt’s an essential discipline for developers, system administrators, and cybersecurity practitioners, offering flexibility, safety, and efficiency in every experiment.\n\n### 🧰 Virtualization Tools\n\n- VMware\n- VirtualBox\n- Bluestacks\n- Android Studio Emulator\n- WSL (Windows Subsystem for Linux)",
       features: [
         "Virtual Machine Management",
         "ISO & OS Installation",
@@ -605,14 +651,28 @@ const skills = [
         "Virtual Networking",
         "Multi-OS Testing"
       ],
-      imgs: [{
-        src: "../media/Skills/10/devConsole.png",
-        alt: "browser dev tools",
-        isBlured: false,
-        isMobile: false,
-      },],
+      imgs: [
+        {
+          src: "../media/Skills/14/kaliimage.png",
+          alt: "kali image",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/14/VBoracle.png",
+          alt: "virtualBox",
+          isBlured: false,
+          isMobile: false,
+        },
+        {
+          src: "../media/Skills/14/VBoracle setting.png",
+          alt: "virtualBox settings",
+          isBlured: false,
+          isMobile: false,
+        },
+      ],
       startdate: "2022-06-01",
-      storyBehindIt: "I needed to test projects on different OS setups, so I explored virtualization and learned to master isolated environments."
+      storyBehindIt: "My journey into **virtualization** began right after mastering Linux.\n\nI needed a way to explore Linux freely—without constantly formatting my main system. Buying a second computer wasn’t an option, so virtualization became my portal to freedom.\n\nIt allowed me to summon different operating systems within my own machine, experiment safely, and learn without limits. My hardware wasn’t the strongest, but it was enough to open new worlds—and that’s what mattered most."
     }
   }
 

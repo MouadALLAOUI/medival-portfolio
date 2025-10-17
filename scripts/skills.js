@@ -91,9 +91,9 @@ function overviewSkills(element) {
 
   skillNameIcon.append(skillIcon, skillName)
 
-  const skillStartDate = document.createElement('p');
-  skillStartDate.className = 'skill-startdate';
-  skillStartDate.innerHTML = `<strong>Started:</strong> ${overview.startdate || 'Unknown'}`;
+  // const skillStartDate = document.createElement('p');
+  // skillStartDate.className = 'skill-startdate';
+  // skillStartDate.innerHTML = `<strong>Started:</strong> ${overview.startdate || 'Unknown'}`;
 
 
 
@@ -116,7 +116,7 @@ function overviewSkills(element) {
   }
 
   skillNameContainer.append(skillNameIcon)
-  skillNameContainer.append(skillStartDate)
+  // skillNameContainer.append(skillStartDate)
   skillNameContainer.append(starContainer)
   const skillIntro = document.createElement('p');
   skillIntro.className = 'skill-intro';

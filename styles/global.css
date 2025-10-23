@@ -227,6 +227,48 @@ blockquote {
   border-radius: var(--border-rad-sm);
 }
 
+.code-block-container {
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  padding: 4px 6px;
+  opacity: 0.7;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+  background: #444;
+}
+
+.inline-code {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 2px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.inline-code:hover {
+  background: #a5a5a5;
+}
+
+.inline-code.copied {
+  background: #4caf50;
+  color: #fff;
+}
+
 @media (max-width: 1024px) {
   .body-container {
     font-size: var(--fs-sm, 16px);
@@ -241,11 +283,6 @@ blockquote {
   }
   h3 {
     font-size: var(--fs-md, 24px);
-  }
-
-  pre,
-  code {
-    /* font-size: var(--fs-vsm, 13px); */
   }
 }
 
@@ -265,17 +302,6 @@ blockquote {
   h3 {
     font-size: var(--fs-sm, 16px);
   }
-
-  /* pre,
-  code {
-    font-size: var(--fs-vsm, 12px);
-    padding: var(--p-sm0, 5px);
-  } */
-
-  /* blockquote {
-    font-size: var(--fs-vsm, 12px);
-    padding-left: var(--p-sm0, 5px);
-  } */
 
   ::-webkit-scrollbar {
     width: 3px;
@@ -299,12 +325,6 @@ blockquote {
   h3 {
     font-size: var(--fs-vsm, 14px);
   }
-
-  /* pre,
-  code {
-    font-size: 11px;
-    word-wrap: break-word;
-  } */
 
   ol,
   ul {

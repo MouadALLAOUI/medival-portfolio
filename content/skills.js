@@ -675,7 +675,6 @@ const skills = [
       storyBehindIt: "My journey into **virtualization** began right after mastering Linux.\n\nI needed a way to explore Linux freely—without constantly formatting my main system. Buying a second computer wasn’t an option, so virtualization became my portal to freedom.\n\nIt allowed me to summon different operating systems within my own machine, experiment safely, and learn without limits. My hardware wasn’t the strongest, but it was enough to open new worlds—and that’s what mattered most."
     }
   }
-
 ];
 
 export default skills;

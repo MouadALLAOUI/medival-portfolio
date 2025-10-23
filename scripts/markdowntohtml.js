@@ -18,11 +18,18 @@ function slugify(text) {
 }
 
 function parseCodeBlocks(markdown) {
-  return applyRegex(markdown, /```([a-z]*)\n([\s\S]*?)\n```/gim, (match, lang, code) => {
-    const escapedCode = escapeHtml(code);
-    return `<pre><code class="language-${lang}">${escapedCode}</code></pre>`;
-
-  });
+  return applyRegex(
+    markdown,
+    /```([a-z]*)\n([\s\S]*?)\n```/gim,
+    (match, lang, code) => {
+      const escapedCode = escapeHtml(code);
+      const codeId = "code-" + Math.random().toString(36).slice(2, 11);
+      // return `<pre><code class="language-${lang}">${escapedCode}</code></pre>`;
+      return `
+        <pre class="code-block-container relative"><code id="${codeId}" class="language-${lang}">${escapedCode}</code><button class="copy-btn" data-target="${codeId}" title="Copy code">📋</button></pre>
+      `;
+    }
+  );
 }
 
 function processCurrentBlock(currentBlock, outputLines, toc) {
@@ -145,7 +152,12 @@ function parseInline(html) {
   html = applyRegex(html, /~~(.*?)~~/gim, "<del>$1</del>");
   html = applyRegex(html, /!\[(.*?)\]\((.*?)\)/gim, '<img src="$2" alt="$1">');
   html = applyRegex(html, /\[(.*?)\]\((.*?)\)/gim, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-  html = applyRegex(html, /`(.*?)`/gim, "<code>$1</code>");
+  // Inline code with copy
+  html = applyRegex(html, /`(.*?)`/gim, (_, code) => {
+    const codeId = "code-" + Math.random().toString(36).slice(2, 11);
+    return `<code class="inline-code" id="${codeId}" data-target="${codeId}" title="Click to copy">${escapeHtml(code)}</code>`;
+  });
+
   return html;
 }
 

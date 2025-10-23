@@ -1,5 +1,6 @@
 import timelines from "../content/timelines.js";
 import { closeImage } from "./viewimage.js";
+import showAlert from "./alerts.js"
 
 const TimelinesContainer = document.querySelector('.timeline');
 const imageViewerClose = document.getElementById('image-viewer-close');
@@ -7,9 +8,12 @@ const imageViewerClose = document.getElementById('image-viewer-close');
 document.addEventListener("contextmenu", (event) => {
   event.preventDefault();
 });
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
-
-
+  showAlert("Welcome to my palace, hope you find whatever you desire", "royal", 3000);
+  showAlert("this portfolio is still under development thank you for your understanding", "chaos", 4000);
   imageViewerClose.addEventListener("click", e => closeImage());
 
   timelines.toReversed().forEach(element => {
@@ -39,4 +43,28 @@ document.addEventListener('DOMContentLoaded', () => {
       timelineItem.classList.toggle('active');
     });
   });
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("copy-btn")) {
+    const targetId = e.target.getAttribute("data-target");
+    const codeElement = document.getElementById(targetId);
+    if (codeElement) {
+      navigator.clipboard.writeText(codeElement.textContent).then(() => {
+        e.target.textContent = "✅";
+        showAlert("Copied to clipboard ✅", "success");
+        setTimeout(() => (e.target.textContent = "📋"), 1500);
+      });
+    }
+  }
+
+  // Inline code click-to-copy
+  if (e.target.classList.contains("inline-code")) {
+    const text = e.target.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      e.target.classList.add("copied");
+      showAlert(`Copied to clipboard ✅: ${text}`, "success");
+      setTimeout(() => e.target.classList.remove("copied"), 1200);
+    });
+  }
 });

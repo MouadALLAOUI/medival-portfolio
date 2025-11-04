@@ -1,4 +1,7 @@
 import blogs from "./content/blogs.js";
+import setCookie, { getCookie } from "../scripts/cookies.js";
+import TrackMe from "../scripts/track.js";
+import showAlert from "../scripts/alerts.js";
 
 
 
@@ -131,3 +134,24 @@ function update() {
 }
 
 document.addEventListener("DOMContentLoaded", update);
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (!getCookie("dailyVisitBlogs")) {
+    const userAgent = navigator.userAgent;
+    const referrer = document.referrer || "Direct visit";
+    let ip = "0.0.0.0";
+    fetch("https://api.ipify.org?format=json")
+      .then(res => res.json())
+      .then(data => {
+        ip = data.ip;
+      });
+    const today = new Date().toISOString().split("T")[0];
+    setCookie("dailyVisitBlogs", today, { expiresAtMidnight: true });
+    showAlert("hello, welcome", "greeting", 2000);
+    TrackMe(ip, userAgent, "blogs", referrer, new Date().toISOString());
+  } else {
+    showAlert("Welcome back", "greeting", 2000);
+  }
+  showAlert("Welcome to my Treasures, hope you find whatever you desire", "royal", 3000);
+  showAlert("these blogs are still under development thank you for your understanding", "chaos", 4000);
+});

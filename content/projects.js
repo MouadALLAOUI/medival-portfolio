@@ -69,32 +69,73 @@ const projects = [
   },
   {
     id: 3,
-    title: "Amz-automobile-front",
-    desc: "this project is a task managament for automobile mecaniques and its reparation. I made the front using react js and electron but still can run on browser.",
+    title: "AMZ AUTOMOBILE Front",
+    desc: "<strong>AMZ AUTOMOBILE</strong>  is a desktop web application built to help manage mechanical tasks efficiently.",
     tags: ["JavaScript", "React", "Electron"],
     link: {
       icon: "🔓",
       link: "https://github.com/MouadALLAOUI/Amz-automobile-front"
     },
     overview: {
-      thumbnail: "",
-      intro: "this project is a task managament for automobile mecaniques and its reparation. I made the front using react js and electron but still can run on browser.",
-      desc: "# Amz-automobile-front\n\nthis project is a task managament for automobile mecaniques and its reparation. I made the front using react js and electron but still can run on browser.",
-      imgs: [],
+      thumbnail: "../media/projects/3/thumb.png",
+      intro: "<strong>AMZ AUTOMOBILE</strong>  is a desktop web application built to help manage mechanical tasks efficiently. <br /> It allows users to track tasks such as <strong>oil changes</strong>, record <strong>who performed them</strong>, <strong>when</strong>, and for <strong>which vehicle (plate number)</strong>.<br /><blockquote>This system simplifies workshop management and ensures maintenance history is transparent and organized.</blockquote>",
+      desc: "AMZ AUTOMOBILE Front is designed to simplify mechanical workshop management. It enables users to log, monitor, and visualize repair operations using a modern interface powered by React and Electron.\n\n## 📜 Prologue\n\nAfter my brother — who works as a mechanic — asked for a better way to organize his work,\n\nI started developing **AMZ AUTOMOBILE** to assist him and other mechanics in managing daily tasks more effectively.\n\n## 🏗️ Project Structure 🚗\n\n```bash\nAmz-automobile-front/\n├── public/\n│    ├── favicon.ico\n│    ├── index.html\n│    ├── manifest.json\n│    └── robots.txt\n├── src/\n│    ├── component/         # All reusable components\n│    ├── env/\n│    │    ├── strings/      # Multilingual support (FR/EN)\n│    │    ├── environnement.jsx\n│    │    └── routers.jsx\n│    ├── media/             # Images and icons\n│    ├── store/\n│    │    ├── store.js\n│    │    └── userSlice.js\n│    ├── styling/           # SCSS, fonts, and style assets\n│    ├── views/\n│    │    ├── content/      # Main client UI\n│    │    ├── Login/        # Login screen\n│    │    ├── notfound.jsx\n│    │    └── Templates.js\n│    └── index.js\n├── .editorconfig\n├── .eslintrc.json\n├── .gitbranch\n├── .gitignore\n├── main.js\n├── package-lock.json\n├── package.json\n├── preload.js\n├── README.md\n└── yarn.lock\n```\n\n## ⚙️ Installation & Usage 🚗\n\n### 📦 Requirements\n\n- `React` v18.3.1+\n- `Node.js`\n- `npm` (or `yarn`)\n\n### 🚀 Installation\n\n1. Clone the repository:\n\n```bash\ngit clone https://github.com/MouadALLAOUI/Amz-automobile-front\n\n```\n\n2. Navigate into the project directory:\n\n```bash\ncd Amz-automobile-front\n\n```\n\n3. Install dependencies:\n\n```bash\nnpm install\n\n```\n\n> ✅ Ensure there are no installation errors and that a `node_modules` folder is created in the root directory.\n\n### ▶️ Run the Application\n\nRun the following commands in **two separate terminals**:\n\n```bash\nnpm start\n\n```\n\n```bash\nnpm run electron\n\n```\n\nThis will start the React frontend and the Electron desktop shell.\n\n## 🧩 Future Plans\n\n- [ ] Fix bugs and optimize performance\n- [ ] Add user roles and permissions\n- [ ] Create admin dashboard\n- [ ] Deploy online\n- [ ] Enable offline functionality\n- [ ] Add more features based on client needs\n\n## 🤝 Contributing\n\nTo leave your mark upon this tome: \n\n1.Fork the repository via the magic mirror(GitHub) \n2.Forge your branch: \n\n```bash\ngit checkout -b AmazingFeature\n\n```\n\n3.Etch your changes: \n\n```bash\ngit commit -m 'Add some AmazingFeature'\n\n```\n\n4.Send your spell upstream: \n```bash\ngit push origin AmazingFeature\n```\n5.Open a summoning gate(Pull Request)\n\n## 💡 Acknowledgments 🚗\n\nSpecial thanks to:\n\n- [Stack Overflow](https://stackoverflow.com) — for debugging and problem-solving\n- [ChatGPT](https://chat.openai.com) — for guidance and development support",
+      imgs: [
+        {
+          src: "../media/projects/3/login.png",
+          alt: "Screenshot – login",
+          isBlur: false
+        },
+        {
+          src: "../media/projects/3/addTask.png",
+          alt: "Screenshot – Add Task",
+          isBlur: false
+        },
+        {
+          src: "../media/projects/3/editTask.png",
+          alt: "Screenshot – Edit Task",
+          isBlur: false
+        },
+        {
+          src: "../media/projects/3/pdfGeneration.png",
+          alt: "Screenshot – PDF Generation",
+          isBlur: false
+        },
+        {
+          src: "../media/projects/3/setting.png",
+          alt: "Screenshot – Settings",
+          isBlur: false
+        },
+        {
+          src: "../media/projects/3/about.png",
+          alt: "Screenshot – About",
+          isBlur: false
+        },
+      ],
       features: [
-        "Electron for desktop application",
+        "Electron-based desktop application",
         "React for frontend development",
-        "Task management features",
-        "Automobile repair tracking",
-        "multiple vehicle makes and models support",
-        "User-friendly interface"
+        "Task management and tracking features",
+        "Automobile repair tracking system",
+        "Support for multiple vehicle types",
+        "User-friendly interface with data visualization",
+        "✅ CRUD operations for tasks",
+        "👥 User management",
+        "📊 Graph visualization",
+        "📋 Dynamic table generation",
+        "🧾 Export tasks to PDF"
       ],
-      startdate: "06 jun 2024",
-      enddate: "ongoing",
-      status: "in progress", // or "complete" | "in progress" | "abondonned" | unknown
+      startdate: "06 Jun 2024",
+      enddate: "Ongoing",
+      status: "in progress",
       link: [
-        { icon: "📦", label: "GitHub", href: "https://github.com/MouadALLAOUI/Amz-automobile-front", isDisabled: false }
-      ],
+        {
+          icon: "📦",
+          label: "GitHub",
+          href: "https://github.com/MouadALLAOUI/Amz-automobile-front",
+          isDisabled: false
+        }
+      ]
     }
   },
   {

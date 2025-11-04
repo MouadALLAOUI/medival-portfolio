@@ -1,5 +1,3 @@
-const alertBox = document.getElementById("alert-box");
-
 function showAlert(message, type = "info", duration = 3000) {
   const container = document.getElementById("alert-container");
   if (!container) return;
@@ -20,6 +18,7 @@ function showAlert(message, type = "info", duration = 3000) {
     cursed: "☠️",
     neutral: "🕯️",
     chaos: "🔥",
+    greeting: "👋"
   };
 
 

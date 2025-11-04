@@ -1,5 +1,8 @@
 import blogs from "../content/blogs.js";
 import { markdownToHtml } from "../../scripts/markdowntohtml.js";
+import setCookie, { getCookie } from "../../scripts/cookies.js";
+import TrackMe from "../../scripts/track.js";
+import showAlert from "../../scripts/alerts.js";
 
 const blogInfo = document.getElementById("blog-info");
 const blogInfoTitle = document.getElementById("blog-title");
@@ -63,6 +66,22 @@ document.addEventListener(
     const params = new URLSearchParams(window.location.search);
     const blogId = params.get("blog");
     const blogById = blogs.find(blog => blog.id == blogId);
+    if (!getCookie(`dailyVisitBlogs${blogId}`)) {
+      const userAgent = navigator.userAgent;
+      const referrer = document.referrer || "Direct visit";
+      let ip = "0.0.0.0";
+      fetch("https://api.ipify.org?format=json")
+        .then(res => res.json())
+        .then(data => {
+          ip = data.ip;
+        });
+      const today = new Date().toISOString().split("T")[0];
+      setCookie(`dailyVisitBlogs${blogId}`, today, { expiresAtMidnight: true });
+      showAlert("hello, welcome", "greeting", 2000);
+      TrackMe(ip, userAgent, `blog : ${blogById.title}`, referrer, new Date().toISOString());
+    } else {
+      showAlert("Welcome back", "greeting", 2000);
+    }
 
     blogs.slice(-5).reverse().forEach(addToSideBar);
 

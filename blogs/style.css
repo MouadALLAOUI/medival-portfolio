@@ -1,3 +1,173 @@
+.alert-bar {
+  background-color: var(--parchment-dark, #e8d5b0);
+  color: var(--rust-light, #b05a46);
+  padding: var(--spacing-sm);
+  text-align: center;
+  font-family: var(--font-medieval, "MedievalSharp", cursive);
+  font-size: 1rem;
+}
+
+/* === Toast Container === */
+/* === 🏰 Alert Container === */
+.alert-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* === 📜 Magical Scroll Box === */
+.alert-box {
+  min-width: 260px;
+  max-width: 460px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 220, 160, 0.6);
+  box-shadow: 0 0 12px rgba(255, 230, 150, 0.6),
+    inset 0 0 10px rgba(255, 255, 200, 0.3);
+  font-family: "Cinzel", "IM Fell English SC", serif;
+  font-weight: 600;
+  color: #fff3e0;
+  text-shadow: 0 0 6px rgba(255, 200, 120, 0.8);
+  background: linear-gradient(
+    160deg,
+    rgba(50, 30, 10, 0.95),
+    rgba(30, 15, 5, 0.9)
+  );
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-20px) scale(0.9);
+  animation: fadeInScroll 0.4s forwards ease-out;
+}
+
+/* === 🪄 Glowing edge effect === */
+.alert-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: linear-gradient(
+      45deg,
+      rgba(255, 215, 100, 0.6),
+      rgba(255, 240, 190, 0.4)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* === 🎨 Themed Types === */
+.alert-success {
+  background: linear-gradient(160deg, #2e5e2a, #1a3d1d);
+  border-color: #aaffaa;
+  box-shadow: 0 0 10px #7cff7c, inset 0 0 10px #2c5a2c;
+}
+
+.alert-warning {
+  background: linear-gradient(160deg, #6b4b0e, #4a2f08);
+  border-color: #ffdb76;
+  box-shadow: 0 0 10px #ffb347, inset 0 0 10px #6b4b0e;
+}
+
+.alert-error {
+  background: linear-gradient(160deg, #5c1111, #3d0606);
+  border-color: #ff8080;
+  box-shadow: 0 0 10px #ff5c5c, inset 0 0 10px #5c1111;
+}
+
+.alert-info {
+  background: linear-gradient(160deg, #1b2a5c, #0d183b);
+  border-color: #89d0ff;
+  box-shadow: 0 0 10px #89d0ff, inset 0 0 10px #1b2a5c;
+}
+
+/* === ⚔️ Quest === */
+.alert-quest {
+  background: linear-gradient(160deg, #3d2f12, #1f1405);
+  border-color: #ffd36b;
+  box-shadow: 0 0 10px #ffcf66, inset 0 0 10px #3d2f12;
+}
+
+/* === 🔮 Arcane (Magic / Mana) === */
+.alert-arcane {
+  background: linear-gradient(160deg, #2e006b, #130033);
+  border-color: #c27cff;
+  box-shadow: 0 0 12px #b97aff, inset 0 0 10px #2e006b;
+}
+
+/* === 🌟 Divine (Holy / Angelic) === */
+.alert-divine {
+  background: linear-gradient(160deg, #fff8d6, #d6b85c);
+  border-color: #fff4a3;
+  color: #3d2c00;
+  text-shadow: none;
+  box-shadow: 0 0 12px #fff3b0, inset 0 0 10px #d6b85c;
+}
+
+/* === 👑 Royal (Elite / Achievement) === */
+.alert-royal {
+  background: linear-gradient(160deg, #3e1a5f, #1b082b);
+  border-color: #d0a6ff;
+  box-shadow: 0 0 12px #b97aff, inset 0 0 10px #3e1a5f;
+}
+
+/* === ☠️ Cursed (Dark Magic) === */
+.alert-cursed {
+  background: linear-gradient(160deg, #0d0d0d, #2c0000);
+  border-color: #a30000;
+  box-shadow: 0 0 15px #a30000, inset 0 0 15px #1a0000;
+  text-shadow: 0 0 8px #ff0000;
+}
+
+/* === 🕯️ Neutral (Scroll or Log) === */
+.alert-neutral {
+  background: linear-gradient(160deg, #5a4a36, #3c3125);
+  border-color: #d2b48c;
+  box-shadow: 0 0 10px #c2a679, inset 0 0 10px #5a4a36;
+}
+
+/* === 🔥 Chaos (Critical / Wild Magic) === */
+.alert-chaos {
+  background: linear-gradient(160deg, #6b0f0f, #2c0404);
+  border-color: #ff3d00;
+  box-shadow: 0 0 12px #ff3d00, inset 0 0 10px #6b0f0f;
+}
+
+/* === 🕯️ Animations === */
+@keyframes fadeInScroll {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeOutScroll {
+  to {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+}
+
+/* === 🪶 Optional little icon margin === */
+.alert-icon {
+  margin-right: 8px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+}
+/* === ============================= === */
+
 * {
   margin: 0;
   padding: 0;
@@ -576,4 +746,78 @@ footer {
     width: 38px;
     font-size: 18px;
   }
+}
+
+.image-viewer {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Active state - visible */
+.image-viewer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Centered content box */
+.image-viewer .img-container {
+  width: 80vw;
+  height: 80vh;
+  transform: scale(0) rotate(360deg);
+  transition: transform 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-viewer .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  position: relative;
+}
+
+.image-viewer .img-container img.portrait {
+  height: 100%;
+  width: 60vw;
+  aspect-ratio: 3/4;
+}
+
+.image-viewer.active .img-container {
+  transform: scale(1) rotate(0deg);
+}
+
+/* Close button */
+.image-viewer .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 100;
+  background: #f00;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

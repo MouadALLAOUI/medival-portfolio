@@ -1,6 +1,8 @@
 import timelines from "../content/timelines.js";
 import { closeImage } from "./viewimage.js";
-import showAlert from "./alerts.js"
+import showAlert from "./alerts.js";
+import setCookie, { getAllCookies, getCookie } from "./cookies.js";
+import TrackMe from "./track.js";
 
 const TimelinesContainer = document.querySelector('.timeline');
 const imageViewerClose = document.getElementById('image-viewer-close');
@@ -12,8 +14,28 @@ document.addEventListener("contextmenu", (event) => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  // TrackMe("ip", "userAgent", "home", "referrer", new Date().toISOString());
+  if (!getCookie("dailyVisitHome")) {
+    const userAgent = navigator.userAgent;
+    const referrer = document.referrer || "Direct visit";
+    let ip = "0.0.0.0";
+    fetch("https://api.ipify.org?format=json")
+      .then(res => res.json())
+      .then(data => {
+        ip = data.ip;
+      });
+    const today = new Date().toISOString().split("T")[0];
+    setCookie("dailyVisitHome", today, { expiresAtMidnight: true });
+    showAlert("hello, welcome", "greeting", 2000);
+    TrackMe(ip, userAgent, "home", referrer, new Date().toISOString());
+  } else {
+    showAlert("Welcome back", "greeting", 2000);
+  }
+  // const allCookies = getAllCookies();
+  // console.log("All Cookies:", allCookies);
   showAlert("Welcome to my palace, hope you find whatever you desire", "royal", 3000);
   showAlert("this portfolio is still under development thank you for your understanding", "chaos", 4000);
+  showAlert("current section under development is projects", "info", 4000);
   imageViewerClose.addEventListener("click", e => closeImage());
 
   timelines.toReversed().forEach(element => {
